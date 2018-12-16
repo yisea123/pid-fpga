@@ -9,12 +9,13 @@ Also, the final step will be integrate the PID-Controller IP to the avalon bus a
 <br />
 Please take a look in the block-diagram figure in the root folder to get a better understanding about the project.
 <br />
-Project details: <br />
+<br />
+<b>Project details:</b> <br />
 In this project I tried to follow the good practices for VHDL development, such as the same ones applied in Volnei Pedroni and Rafael Cancian examples (next-state combinational logic, memory element i.e flip-flop, output logic). <br />
 In all the written modules you won't see a flip-flop infered inside the next-state FSM, for example.
  <br />
  <br />
-Currently state: <br />
+<b>Currently state:</b> <br />
  <br />
 The PID controller is running in the Modelsim simulation, but still don't works on the DE-10 board. <br />
 The wrapper for avalon bus is already written, I just need to make the project work on the board before test it.<br />
