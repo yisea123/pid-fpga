@@ -11,7 +11,7 @@ Please take a look in the block-diagram figure in the root folder to get a bette
 <br />
 <br />
 <b>Project details:</b> <br />
-In this project I tried to follow the good practices for VHDL development, such as the same ones applied in Volnei Pedroni and Rafael Cancian examples (next-state combinational logic, memory element i.e flip-flop, output logic). <br />
+In this project I tried to follow the good practices for VHDL development, such as the same ones applied by Volnei Pedroni and Rafael Cancian in their examples (next-state combinational logic, memory element i.e flip-flop, output logic). <br />
 In all the written modules you won't see a flip-flop infered inside the next-state FSM, for example.
  <br />
  <br />
