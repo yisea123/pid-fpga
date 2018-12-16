@@ -1,0 +1,52 @@
+
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all;                                
+use ieee.numeric_std.all;
+
+ENTITY tb_n_adder_sub IS
+END tb_n_adder_sub;
+ARCHITECTURE behavioral OF tb_n_adder_sub IS
+-- constants      
+constant n_bits: positive := 8;                                           
+-- signals                                                   
+SIGNAL a : STD_LOGIC_VECTOR(n_bits-1 DOWNTO 0);
+SIGNAL b : STD_LOGIC_VECTOR(n_bits-1 DOWNTO 0);
+SIGNAL op : STD_LOGIC;
+SIGNAL s : STD_LOGIC_VECTOR(n_bits-1 DOWNTO 0);
+
+COMPONENT n_adder_sub
+	generic (
+      n: positive := 8;
+    );
+	PORT (
+	a : IN STD_LOGIC_VECTOR(n-1 DOWNTO 0);
+	b : IN STD_LOGIC_VECTOR(n-1 DOWNTO 0);
+	op : IN STD_LOGIC;
+	s : OUT STD_LOGIC_VECTOR(n-1 DOWNTO 0)
+	);
+END COMPONENT;
+
+BEGIN
+	addsub : n_adder_sub :PORT MAP (a, b, op, s);
+	
+    always : PROCESS                                              
+                                    
+    BEGIN                                                         
+        -- code executes for every event on sensitivity list
+        a <= std_logic_vector(to_signed(-128, 8));
+        b <= std_logic_vector(to_signed(-1, 8));
+        wait for 20 ns;
+        assert ovf='1'
+            report "OVERFLOW ERROR, OVF = 1"
+            severity error;
+        b <= (others =>'0');
+        wait for 20 ns;
+        assert ovf='0'
+            report "OVERFLOW ERROR, OVF = 0"
+            severity error;
+        a <= std_logic_vector(to_signed(-1, 8));
+        b <= std_logic_vector(to_signed(1, 8));
+        
+        WAIT;                                                        
+    END PROCESS always;                                             
+END behavioral;

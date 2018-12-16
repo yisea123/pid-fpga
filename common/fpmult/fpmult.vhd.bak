@@ -1,0 +1,53 @@
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+LIBRARY altera_mf;
+USE altera_mf.altera_mf_components.all;
+
+ENTITY fpmult IS
+	PORT (
+			clock	: IN STD_LOGIC ;
+			datab	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+			overflow	: OUT STD_LOGIC ;
+			underflow	: OUT STD_LOGIC ;
+			zero	: OUT STD_LOGIC ;
+			dataa	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+			nan	: OUT STD_LOGIC ;
+			result	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+END fpmult;
+
+
+ARCHITECTURE SYN OF fpmult IS
+
+    SIGNAL sub_wire0	: STD_LOGIC ;
+	SIGNAL sub_wire1	: STD_LOGIC ;
+	SIGNAL sub_wire2	: STD_LOGIC ;
+	SIGNAL sub_wire3	: STD_LOGIC ;
+	SIGNAL sub_wire4	: STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+BEGIN
+	overflow    <= sub_wire0;
+	underflow    <= sub_wire1;
+	zero    <= sub_wire2;
+	nan    <= sub_wire3;
+	result    <= sub_wire4(31 DOWNTO 0);
+
+	altfpmult_component : alt_fpmult
+	PORT MAP (
+		clock => clock,
+		datab => datab,
+		dataa => dataa,
+		overflow => sub_wire0,
+		underflow => sub_wire1,
+		zero => sub_wire2,
+		nan => sub_wire3,
+		result => sub_wire4
+	);
+
+
+
+END SYN;
+

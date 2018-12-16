@@ -1,0 +1,35 @@
+|n_counter
+clk => current_counter[0].CLK
+clk => current_counter[1].CLK
+clk => current_counter[2].CLK
+clk => current_counter[3].CLK
+clk => current_counter[4].CLK
+clk => current_counter[5].CLK
+clk => current_counter[6].CLK
+clk => current_counter[7].CLK
+rst => current_counter[0].ACLR
+rst => current_counter[1].ACLR
+rst => current_counter[2].ACLR
+rst => current_counter[3].ACLR
+rst => current_counter[4].ACLR
+rst => current_counter[5].ACLR
+rst => current_counter[6].ACLR
+rst => current_counter[7].ACLR
+dir => next_counter[7].OUTPUTSELECT
+dir => next_counter[6].OUTPUTSELECT
+dir => next_counter[5].OUTPUTSELECT
+dir => next_counter[4].OUTPUTSELECT
+dir => next_counter[3].OUTPUTSELECT
+dir => next_counter[2].OUTPUTSELECT
+dir => next_counter[1].OUTPUTSELECT
+dir => next_counter[0].OUTPUTSELECT
+count[0] <= current_counter[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= current_counter[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= current_counter[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= current_counter[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= current_counter[4].DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= current_counter[5].DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= current_counter[6].DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= current_counter[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

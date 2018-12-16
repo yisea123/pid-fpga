@@ -1,0 +1,51 @@
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+LIBRARY altera_mf;
+USE altera_mf.altera_mf_components.all;
+
+ENTITY fp2int IS
+	PORT (
+			clock_sig	: IN STD_LOGIC ;
+			overflow_sig	: OUT STD_LOGIC ;
+			underflow_sig	: OUT STD_LOGIC ;
+			zero_sig	: OUT STD_LOGIC ;
+			dataa_sig	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+			nan_sig	: OUT STD_LOGIC ;
+			result_sig	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+END fp2int;
+
+
+ARCHITECTURE behavioral OF fp2int IS
+
+
+   	COMPONENT alt_fp2int
+	PORT (
+			clock	: IN STD_LOGIC ;
+			overflow	: OUT STD_LOGIC ;
+			underflow	: OUT STD_LOGIC ;
+			zero	: OUT STD_LOGIC ;
+			dataa	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+			nan	: OUT STD_LOGIC ;
+			result	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+	END COMPONENT; 
+    
+BEGIN
+
+alt_fp2int_inst : alt_fp2int PORT MAP (
+		clock	 => clock_sig,
+		dataa	 => dataa_sig,
+		nan	 => nan_sig,
+		overflow	 => overflow_sig,
+		result	 => result_sig,
+		underflow	 => underflow_sig
+	);
+    
+
+
+END behavioral;
+

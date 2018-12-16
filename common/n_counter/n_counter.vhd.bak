@@ -1,0 +1,32 @@
+ library ieee;
+ use ieee.std_logic_1164.all;
+ use ieee.std_logic_unsigned.all;
+ 
+ entity n_counter is
+    generic (n: positive :=8);
+     port (
+         count   :out std_logic_vector (n-1 downto 0); -- Output of the counter
+         enable :in  std_logic;                     -- Enable counting
+         clk    :in  std_logic;                     -- Input clock
+         dir    : in std_logic; --0/1: up/down
+         reset  :in  std_logic                      -- Input reset
+     );
+ end entity;
+ 
+ architecture behavioral of n_counter is
+     signal counter :std_logic_vector (7 downto 0);
+ begin
+     process (clk, reset) begin
+         if (reset = '1') then
+             counter <= (others=>'0');
+         elsif (rising_edge(clk)) then
+             if (enable = '1') then
+                if (dir = '0') then
+                    counter <= counter + 1;
+                else 
+                    counter <= counter - 1;
+             end if;
+         end if;
+     end process;
+     count <= counter;
+ end architecture;

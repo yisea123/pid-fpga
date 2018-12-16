@@ -1,0 +1,31 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.log_package.all;
+use work.data_package.all;
+
+entity mux_4_1 is
+	 generic (
+       n_inputs:    positive := 3;
+       inputs_width: positive := mux_input_bits        
+    );
+	  
+	port (
+		a: in std_logic_vector(n_inputs*inputs_width-1 downto 0); --works in ise 14.7 --vhdl2003 compatible
+		sel: in std_logic_vector(3 downto 0);
+		y: out std_logic_vector(inputs_width-1 downto 0)
+	);
+end mux_4_1;
+
+architecture behavioral of mux_4_1 is
+
+begin
+
+		y <= a(0 to 7) when sel="0001" else
+			  a(8 to 15) when sel="0010" else
+			  a(16 to 23) when sel="0100" else
+			  a(24 to 31) when sel="1000";
+	
+end behavioral;
+

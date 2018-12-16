@@ -1,0 +1,133 @@
+Flow report for fp2int
+Thu Nov 08 17:24:14 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Thu Nov 08 17:24:14 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; fp2int                                          ;
+; Top-level Entity Name              ; fp2int                                          ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C5AF256A7                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 230 / 4,608 ( 5 % )                             ;
+;     Total combinational functions  ; 189 / 4,608 ( 4 % )                             ;
+;     Dedicated logic registers      ; 183 / 4,608 ( 4 % )                             ;
+; Total registers                    ; 183                                             ;
+; Total pins                         ; 48 / 158 ( 30 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/08/2018 17:24:02 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; fp2int              ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 167300351925160.154170504212864 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTFP_CONVERT                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 125                             ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; alt_fp2int.bsf                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; alt_fp2int_inst.vhd             ; --            ; --          ; --             ;
+; MISC_FILE                           ; alt_fp2int.inc                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; alt_fp2int.cmp                  ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4682 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 4815 MB             ; 00:00:03                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4564 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4555 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4522 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-22R8DLK  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-22R8DLK  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-22R8DLK  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-22R8DLK  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-22R8DLK  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off fp2int -c fp2int
+quartus_fit --read_settings_files=off --write_settings_files=off fp2int -c fp2int
+quartus_asm --read_settings_files=off --write_settings_files=off fp2int -c fp2int
+quartus_sta fp2int -c fp2int
+quartus_eda --read_settings_files=off --write_settings_files=off fp2int -c fp2int
+
+
+

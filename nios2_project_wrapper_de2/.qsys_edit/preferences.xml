@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="111" />
+   <irq preferredWidth="34" />
+   <export preferredWidth="240" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="520" />
+   <clocksource preferredWidth="520" />
+   <frequency preferredWidth="502" />
+  </columns>
+ </clocktable>
+ <library expandedCategories="Project/Other,Library,Project" />
+ <window x="74" y="-8" width="1854" height="1096" />
+ <hdlexample language="VHDL" />
+ <generation
+   path="C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2"
+   synthesis="VHDL" />
+</preferences>

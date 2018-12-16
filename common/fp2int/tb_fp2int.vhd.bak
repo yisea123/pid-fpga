@@ -1,0 +1,83 @@
+
+library ieee;
+USE ieee.std_logic_1164.all;                                
+use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;
+
+--library ieee_proposed;
+--use ieee_proposed.float_pkg.all ;
+
+LIBRARY altera_mf;
+USE altera_mf.altera_mf_components.all;
+
+
+ENTITY tb_conv IS
+END tb_conv;
+
+ARCHITECTURE behavioral OF tb_conv IS
+  
+-- constants                                                 
+-- signals                                                   
+SIGNAL dataa :   STD_LOGIC_VECTOR (31 DOWNTO 0) := (others => '0');
+SIGNAL overflow :   STD_LOGIC := '0';
+SIGNAL underflow :   STD_LOGIC := '0';
+SIGNAL nan :   STD_LOGIC := '0';
+signal clock : std_logic := '0';
+SIGNAL result :   STD_LOGIC_VECTOR (31 DOWNTO 0); 
+   -- Clock frequency and signal
+constant clk_period : time := 20 ns;  
+  
+--signal sig_a, sig_b : float32;    
+    
+COMPONENT fp2int
+        PORT 
+  ( 
+	clock_sig	: IN STD_LOGIC ;
+	overflow_sig	: OUT STD_LOGIC ;
+	underflow_sig	: OUT STD_LOGIC ;
+	dataa_sig	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+	nan_sig	: OUT STD_LOGIC ;
+	result_sig	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+  ); 
+END COMPONENT;
+
+BEGIN
+
+ fp2int_inst : fp2int
+ PORT MAP (
+		clock_sig	 => clock,
+		dataa_sig	 => dataa,
+		nan_sig	 => nan,
+		overflow_sig	 => overflow,
+		result_sig	 => result,
+		underflow_sig	 => underflow,
+ );
+ 
+   clk_process :process
+   begin
+        clock <= '0';
+        wait for clk_period/2;
+        clock <= '1';
+        wait for clk_period/2;
+   end process clk_process; 
+ 
+    stim_proc: process                                              
+    BEGIN    
+   
+		dataa <= "01000000111100000000000000000000"; --7.5
+        wait for clk_period*10;
+        dataa <= "00111111100000000000000000000000"; --1.0  
+        wait for clk_period*10;
+        dataa <= "01000000010010001111010111000011"; --3.14
+        wait for clk_period*10;
+        dataa <= "01000001000000100001110010101100"; --8.132  
+        wait for clk_period*10;
+        dataa <= "01000000001000000000000000000000"; --2.5
+        wait for clk_period*10;
+        dataa <= "01000001100010110000000000000000"; --17.375     
+        WAIT;            
+    END PROCESS stim_proc;   
+
+  
+END behavioral;
+

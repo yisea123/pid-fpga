@@ -1,0 +1,102 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 20:19:31  October 25, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		pid_controller_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7
+set_global_assignment -name TOP_LEVEL_ENTITY pid_controller
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:19:31  OCTOBER 25, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name VHDL_FILE ../common/debouncer/debouncer.vhd
+set_global_assignment -name VHDL_FILE ../common/packages/log_package.vhd
+set_global_assignment -name VHDL_FILE ../control_unit/control_unit.vhd
+set_global_assignment -name VHDL_FILE ../operational_unit/operational_unit.vhd
+set_global_assignment -name VHDL_FILE ../common/superb_pwm/superb_pwm.vhd
+set_global_assignment -name VHDL_FILE ../common/n_trigger_counter/n_trigger_counter.vhd
+set_global_assignment -name VHDL_FILE ../common/n_register/n_register.vhd
+set_global_assignment -name VHDL_FILE ../common/n_mux/mux_n_1.vhd
+set_global_assignment -name VHDL_FILE ../common/n_counter/n_counter.vhd
+set_global_assignment -name VHDL_FILE ../common/n_adder_sub/n_adder_sub.vhd
+set_global_assignment -name VHDL_FILE ../common/int2fp/int2fp.vhd
+set_global_assignment -name VHDL_FILE ../common/int2fp/alt_int2fp.vhd
+set_global_assignment -name VHDL_FILE ../common/fpsum/fpsum.vhd
+set_global_assignment -name VHDL_FILE ../common/fpsum/alt_fpaddsub.vhd
+set_global_assignment -name VHDL_FILE ../common/fpmult/fpmult.vhd
+set_global_assignment -name VHDL_FILE ../common/fpmult/alt_fpmult.vhd
+set_global_assignment -name VHDL_FILE ../common/fp2int/fp2int.vhd
+set_global_assignment -name VHDL_FILE ../common/fp2int/alt_fp2int.vhd
+set_global_assignment -name VHDL_FILE pid_controller.vhd
+set_global_assignment -name VHDL_FILE tb_pid_controller.vhd
+set_global_assignment -name SDC_FILE pid_controller.sdc
+set_location_assignment PIN_V11 -to clk
+set_location_assignment PIN_W24 -to cmd[1]
+set_location_assignment PIN_Y24 -to cmd[0]
+set_location_assignment PIN_AH17 -to cmd_send
+set_location_assignment PIN_AG20 -to encoder_in
+set_location_assignment PIN_AF21 -to pwm_out
+set_location_assignment PIN_W20 -to rst
+set_location_assignment PIN_AA23 -to state_debug[7]
+set_location_assignment PIN_Y16 -to state_debug[6]
+set_location_assignment PIN_AE26 -to state_debug[5]
+set_location_assignment PIN_AF26 -to state_debug[4]
+set_location_assignment PIN_V15 -to state_debug[3]
+set_location_assignment PIN_V16 -to state_debug[2]
+set_location_assignment PIN_AA24 -to state_debug[1]
+set_location_assignment PIN_W15 -to state_debug[0]
+set_location_assignment PIN_W11 -to user_rpm[7]
+set_location_assignment PIN_AB23 -to user_rpm[6]
+set_location_assignment PIN_AC22 -to user_rpm[5]
+set_location_assignment PIN_AD17 -to user_rpm[4]
+set_location_assignment PIN_AD20 -to user_rpm[3]
+set_location_assignment PIN_AE24 -to user_rpm[2]
+set_location_assignment PIN_AE6 -to user_rpm[1]
+set_location_assignment PIN_AG14 -to user_rpm[0]
+set_global_assignment -name CDF_FILE output_files/gravacao_flash.cdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

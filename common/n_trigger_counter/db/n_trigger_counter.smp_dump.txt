@@ -1,0 +1,6 @@
+
+State Machine - |n_trigger_counter|current_state
+Name current_state.trigger_st current_state.counting current_state.reset 
+current_state.reset 0 0 0 
+current_state.counting 0 1 1 
+current_state.trigger_st 1 0 1 

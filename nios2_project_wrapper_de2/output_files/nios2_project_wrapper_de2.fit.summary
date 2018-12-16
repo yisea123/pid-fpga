@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Oct 11 15:16:34 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : nios2_project_wrapper_de2
+Top-level Entity Name : nios2_project_wrapper_de2
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 2,496 / 33,216 ( 8 % )
+    Total combinational functions : 2,317 / 33,216 ( 7 % )
+    Dedicated logic registers : 1,461 / 33,216 ( 4 % )
+Total registers : 1461
+Total pins : 9 / 475 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 192,384 / 483,840 ( 40 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

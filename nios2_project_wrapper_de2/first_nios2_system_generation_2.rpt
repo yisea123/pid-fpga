@@ -1,0 +1,180 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/" --output-directory="C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/" --report-file="bsf:C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/first_nios2_system.bsf" --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file="C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/first_nios2_system.qsys"
+Progress: Loading nios2_project_wrapper_de2/first_nios2_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_mem
+Progress: Adding cpu [altera_nios2_qsys 13.0]
+Progress: Parameterizing module cpu
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart
+Progress: Adding sys_clk_timer [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module sys_clk_timer
+Progress: Adding sysid [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid
+Progress: Adding led_pio [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module led_pio
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: first_nios2_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: first_nios2_system.sysid: Time stamp will be automatically updated when this component is generated.
+Warning: first_nios2_system.led_pio: led_pio.external_connection must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/" --output-directory="C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/synthesis/" --file-set=QUARTUS_SYNTH --report-file="sopcinfo:C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/first_nios2_system.sopcinfo" --report-file="html:C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/first_nios2_system.html" --report-file="qip:C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/synthesis/first_nios2_system.qip" --report-file="cmp:C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/first_nios2_system.cmp" --report-file=svd --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file="C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/first_nios2_system.qsys" --language=VERILOG
+Progress: Loading nios2_project_wrapper_de2/first_nios2_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_mem
+Progress: Adding cpu [altera_nios2_qsys 13.0]
+Progress: Parameterizing module cpu
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart
+Progress: Adding sys_clk_timer [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module sys_clk_timer
+Progress: Adding sysid [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid
+Progress: Adding led_pio [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module led_pio
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: first_nios2_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: first_nios2_system.sysid: Time stamp will be automatically updated when this component is generated.
+Warning: first_nios2_system.led_pio: led_pio.external_connection must be exported, or connected to a matching conduit.
+Info: first_nios2_system: Generating first_nios2_system "first_nios2_system" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 7 modules, 29 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 15 modules, 61 connections
+Info: merlin_domain_transform: After transform: 30 modules, 161 connections
+Info: merlin_router_transform: After transform: 38 modules, 193 connections
+Info: merlin_traffic_limiter_transform: After transform: 39 modules, 198 connections
+Info: reset_adaptation_transform: After transform: 40 modules, 156 connections
+Info: merlin_network_to_switch_transform: After transform: 55 modules, 188 connections
+Info: limiter_update_transform: After transform: 55 modules, 189 connections
+Info: merlin_mm_transform: After transform: 55 modules, 189 connections
+Info: merlin_interrupt_mapper_transform: After transform: 56 modules, 192 connections
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: first_nios2_system: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info: onchip_mem: Starting RTL generation for module 'first_nios2_system_onchip_mem'
+Info: onchip_mem:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=first_nios2_system_onchip_mem --dir=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0050_onchip_mem_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0050_onchip_mem_gen//first_nios2_system_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_mem: Done RTL generation for module 'first_nios2_system_onchip_mem'
+Info: onchip_mem: "first_nios2_system" instantiated altera_avalon_onchip_memory2 "onchip_mem"
+Info: cpu: Starting RTL generation for module 'first_nios2_system_cpu'
+Info: cpu:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=first_nios2_system_cpu --dir=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0051_cpu_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0051_cpu_gen//first_nios2_system_cpu_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: cpu: # 2018.10.11 14:49:05 (*) Starting Nios II generation
+Info: cpu: # 2018.10.11 14:49:05 (*)   Checking for plaintext license.
+Info: cpu: # 2018.10.11 14:49:05 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info: cpu: # 2018.10.11 14:49:05 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2018.10.11 14:49:05 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2018.10.11 14:49:05 (*)   Plaintext license not found.
+Info: cpu: # 2018.10.11 14:49:05 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2018.10.11 14:49:06 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info: cpu: # 2018.10.11 14:49:06 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2018.10.11 14:49:06 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2018.10.11 14:49:06 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2018.10.11 14:49:06 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.10.11 14:49:06 (*)   Creating all objects for CPU
+Info: cpu: # 2018.10.11 14:49:06 (*)     Pipeline frontend
+Info: cpu: # 2018.10.11 14:49:08 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.10.11 14:49:10 (*)   Creating encrypted RTL
+Info: cpu: # 2018.10.11 14:49:11 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'first_nios2_system_cpu'
+Info: cpu: "first_nios2_system" instantiated altera_nios2_qsys "cpu"
+Info: jtag_uart: Starting RTL generation for module 'first_nios2_system_jtag_uart'
+Info: jtag_uart:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=first_nios2_system_jtag_uart --dir=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0052_jtag_uart_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0052_jtag_uart_gen//first_nios2_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'first_nios2_system_jtag_uart'
+Info: jtag_uart: "first_nios2_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: sys_clk_timer: Starting RTL generation for module 'first_nios2_system_sys_clk_timer'
+Info: sys_clk_timer:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=first_nios2_system_sys_clk_timer --dir=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0053_sys_clk_timer_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0053_sys_clk_timer_gen//first_nios2_system_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: sys_clk_timer: Done RTL generation for module 'first_nios2_system_sys_clk_timer'
+Info: sys_clk_timer: "first_nios2_system" instantiated altera_avalon_timer "sys_clk_timer"
+Info: sysid: "first_nios2_system" instantiated altera_avalon_sysid_qsys "sysid"
+Info: led_pio: Starting RTL generation for module 'first_nios2_system_led_pio'
+Info: led_pio:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=first_nios2_system_led_pio --dir=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0055_led_pio_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/VICTOR~1/AppData/Local/Temp/alt7815_3851516210021712282.dir/0055_led_pio_gen//first_nios2_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio: Done RTL generation for module 'first_nios2_system_led_pio'
+Info: led_pio: "first_nios2_system" instantiated altera_avalon_pio "led_pio"
+Info: cpu_data_master_translator: "first_nios2_system" instantiated altera_merlin_master_translator "cpu_data_master_translator"
+Info: onchip_mem_s1_translator: "first_nios2_system" instantiated altera_merlin_slave_translator "onchip_mem_s1_translator"
+Info: cpu_data_master_translator_avalon_universal_master_0_agent: "first_nios2_system" instantiated altera_merlin_master_agent "cpu_data_master_translator_avalon_universal_master_0_agent"
+Info: onchip_mem_s1_translator_avalon_universal_slave_0_agent: "first_nios2_system" instantiated altera_merlin_slave_agent "onchip_mem_s1_translator_avalon_universal_slave_0_agent"
+Info: onchip_mem_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "first_nios2_system" instantiated altera_avalon_sc_fifo "onchip_mem_s1_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "first_nios2_system" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "first_nios2_system" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "first_nios2_system" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "first_nios2_system" instantiated altera_merlin_router "id_router_001"
+Info: limiter: "first_nios2_system" instantiated altera_merlin_traffic_limiter "limiter"
+Info: rst_controller: "first_nios2_system" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "first_nios2_system" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "first_nios2_system" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "first_nios2_system" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "first_nios2_system" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_001: "first_nios2_system" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_001"
+Info: rsp_xbar_mux: "first_nios2_system" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "first_nios2_system" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file C:/Users/Victor Santos/Documents/FPGA/library/nios2_project_wrapper_de2/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: irq_mapper: "first_nios2_system" instantiated altera_irq_mapper "irq_mapper"
+Info: first_nios2_system: Done first_nios2_system" with 26 modules, 75 files, 1578012 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,1124 @@
+Analysis & Synthesis report for fpsum
+Sun Nov 11 19:33:03 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated|altsyncram_7461:altsyncram4
+ 15. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1
+ 16. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub2
+ 17. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3
+ 18. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4
+ 19. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5
+ 20. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub6
+ 21. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower
+ 22. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0
+ 23. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper1
+ 24. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_lower
+ 25. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper0
+ 26. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper1
+ 27. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower
+ 28. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1
+ 29. Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator
+ 30. Parameter Settings for Inferred Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0
+ 31. altshift_taps Parameter Settings by Entity Instance
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 11 19:33:03 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; fpsum                                           ;
+; Top-level Entity Name              ; fpsum                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 838                                             ;
+;     Total combinational functions  ; 784                                             ;
+;     Dedicated logic registers      ; 347                                             ;
+; Total registers                    ; 347                                             ;
+; Total pins                         ; 104                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 36                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C5AF256A7       ;                    ;
+; Top-level entity name                                                      ; fpsum              ; fpsum              ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; alt_fpaddsub.vhd                 ; yes             ; User Wizard-Generated File   ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/alt_fpaddsub.vhd       ;         ;
+; fpsum.vhd                        ; yes             ; User VHDL File               ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/fpsum.vhd              ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                        ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc                            ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc                           ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                           ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                           ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                         ;         ;
+; db/add_sub_38g.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_38g.tdf     ;         ;
+; db/add_sub_08g.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_08g.tdf     ;         ;
+; db/add_sub_27g.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_27g.tdf     ;         ;
+; db/add_sub_bsi.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_bsi.tdf     ;         ;
+; db/add_sub_qsk.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_qsk.tdf     ;         ;
+; db/add_sub_vdk.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_vdk.tdf     ;         ;
+; db/add_sub_8ng.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_8ng.tdf     ;         ;
+; db/add_sub_hvg.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_hvg.tdf     ;         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf                        ;         ;
+; comptree.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc                           ;         ;
+; db/cmpr_lmh.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/cmpr_lmh.tdf        ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf                      ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                           ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                        ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                        ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                       ;         ;
+; db/shift_taps_51n.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/shift_taps_51n.tdf  ;         ;
+; db/altsyncram_7461.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/altsyncram_7461.tdf ;         ;
+; db/add_sub_gvd.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/add_sub_gvd.tdf     ;         ;
+; db/cntr_kkf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/cntr_kkf.tdf        ;         ;
+; db/cmpr_6cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/cmpr_6cc.tdf        ;         ;
+; db/cntr_74h.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/db/cntr_74h.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 838   ;
+;                                             ;       ;
+; Total combinational functions               ; 784   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 361   ;
+;     -- 3 input functions                    ; 304   ;
+;     -- <=2 input functions                  ; 119   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 637   ;
+;     -- arithmetic mode                      ; 147   ;
+;                                             ;       ;
+; Total registers                             ; 347   ;
+;     -- Dedicated logic registers            ; 347   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 104   ;
+; Total memory bits                           ; 36    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 359   ;
+; Total fan-out                               ; 4147  ;
+; Average fan-out                             ; 3.33  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-----------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                               ; Library Name ;
++-----------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |fpsum                                                                            ; 784 (1)           ; 347 (0)      ; 36          ; 0            ; 0       ; 0         ; 104  ; 0            ; |fpsum                                                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
+;    |alt_fpaddsub:alt_fpaddsub_inst|                                               ; 783 (0)           ; 347 (0)      ; 36          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst                                                                                                                                                                                                                                                                                                                                                                             ; work         ;
+;       |alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|   ; 783 (295)         ; 347 (224)    ; 36          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component                                                                                                                                                                                                                                                                                                     ; work         ;
+;          |alt_fpaddsub_altbarrel_shift_6hb:rbarrel_shift|                         ; 106 (106)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_6hb:rbarrel_shift                                                                                                                                                                                                                                                      ; work         ;
+;          |alt_fpaddsub_altbarrel_shift_h0e:lbarrel_shift|                         ; 111 (111)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_h0e:lbarrel_shift                                                                                                                                                                                                                                                      ; work         ;
+;          |alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|                ; 29 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt                                                                                                                                                                                                                                             ; work         ;
+;             |alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|          ; 14 (8)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21                                                                                                                                                                                  ; work         ;
+;                |alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder23|       ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder23                                                                                                                       ; work         ;
+;                   |alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder25|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder23|alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder25                                                            ; work         ;
+;                |alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder24|       ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder24                                                                                                                       ; work         ;
+;                   |alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder25|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder24|alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder25                                                            ; work         ;
+;                   |alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder26|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder24|alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder26                                                            ; work         ;
+;                      |alt_fpaddsub_altpriority_encoder_nh8:altpriority_encoder27| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder24|alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder26|alt_fpaddsub_altpriority_encoder_nh8:altpriority_encoder27 ; work         ;
+;          |alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|                ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt                                                                                                                                                                                                                                             ; work         ;
+;          |altshift_taps:man_res_is_not_zero_dffe31_rtl_0|                         ; 10 (0)            ; 6 (0)        ; 36          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0                                                                                                                                                                                                                                                      ; work         ;
+;             |shift_taps_51n:auto_generated|                                       ; 10 (2)            ; 6 (3)        ; 36          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated                                                                                                                                                                                                                        ; work         ;
+;                |altsyncram_7461:altsyncram4|                                      ; 0 (0)             ; 0 (0)        ; 36          ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated|altsyncram_7461:altsyncram4                                                                                                                                                                                            ; work         ;
+;                |cntr_74h:cntr5|                                                   ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated|cntr_74h:cntr5                                                                                                                                                                                                         ; work         ;
+;                |cntr_kkf:cntr1|                                                   ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated|cntr_kkf:cntr1                                                                                                                                                                                                         ; work         ;
+;          |lpm_add_sub:add_sub1|                                                   ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1                                                                                                                                                                                                                                                                                ; work         ;
+;             |add_sub_38g:auto_generated|                                          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1|add_sub_38g:auto_generated                                                                                                                                                                                                                                                     ; work         ;
+;          |lpm_add_sub:add_sub2|                                                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub2                                                                                                                                                                                                                                                                                ; work         ;
+;             |add_sub_38g:auto_generated|                                          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub2|add_sub_38g:auto_generated                                                                                                                                                                                                                                                     ; work         ;
+;          |lpm_add_sub:add_sub3|                                                   ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3                                                                                                                                                                                                                                                                                ; work         ;
+;             |add_sub_08g:auto_generated|                                          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3|add_sub_08g:auto_generated                                                                                                                                                                                                                                                     ; work         ;
+;          |lpm_add_sub:add_sub4|                                                   ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4                                                                                                                                                                                                                                                                                ; work         ;
+;             |add_sub_27g:auto_generated|                                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4|add_sub_27g:auto_generated                                                                                                                                                                                                                                                     ; work         ;
+;          |lpm_add_sub:add_sub5|                                                   ; 9 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5                                                                                                                                                                                                                                                                                ; work         ;
+;             |add_sub_bsi:auto_generated|                                          ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5|add_sub_bsi:auto_generated                                                                                                                                                                                                                                                     ; work         ;
+;          |lpm_add_sub:add_sub6|                                                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub6                                                                                                                                                                                                                                                                                ; work         ;
+;             |add_sub_27g:auto_generated|                                          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub6|add_sub_27g:auto_generated                                                                                                                                                                                                                                                     ; work         ;
+;          |lpm_add_sub:man_2comp_res_lower|                                        ; 30 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower                                                                                                                                                                                                                                                                     ; work         ;
+;             |add_sub_qsk:auto_generated|                                          ; 30 (30)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower|add_sub_qsk:auto_generated                                                                                                                                                                                                                                          ; work         ;
+;          |lpm_add_sub:man_2comp_res_upper0|                                       ; 25 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0                                                                                                                                                                                                                                                                    ; work         ;
+;             |add_sub_vdk:auto_generated|                                          ; 25 (25)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0|add_sub_vdk:auto_generated                                                                                                                                                                                                                                         ; work         ;
+;          |lpm_add_sub:man_2comp_res_upper1|                                       ; 13 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper1                                                                                                                                                                                                                                                                    ; work         ;
+;             |add_sub_vdk:auto_generated|                                          ; 13 (13)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper1|add_sub_vdk:auto_generated                                                                                                                                                                                                                                         ; work         ;
+;          |lpm_add_sub:man_add_sub_lower|                                          ; 30 (0)            ; 15 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_lower                                                                                                                                                                                                                                                                       ; work         ;
+;             |add_sub_qsk:auto_generated|                                          ; 30 (30)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_lower|add_sub_qsk:auto_generated                                                                                                                                                                                                                                            ; work         ;
+;          |lpm_add_sub:man_add_sub_upper0|                                         ; 26 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper0                                                                                                                                                                                                                                                                      ; work         ;
+;             |add_sub_vdk:auto_generated|                                          ; 26 (26)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper0|add_sub_vdk:auto_generated                                                                                                                                                                                                                                           ; work         ;
+;          |lpm_add_sub:man_add_sub_upper1|                                         ; 14 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper1                                                                                                                                                                                                                                                                      ; work         ;
+;             |add_sub_vdk:auto_generated|                                          ; 14 (14)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper1|add_sub_vdk:auto_generated                                                                                                                                                                                                                                           ; work         ;
+;          |lpm_add_sub:man_res_rounding_add_sub_lower|                             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower                                                                                                                                                                                                                                                          ; work         ;
+;             |add_sub_8ng:auto_generated|                                          ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower|add_sub_8ng:auto_generated                                                                                                                                                                                                                               ; work         ;
+;          |lpm_add_sub:man_res_rounding_add_sub_upper1|                            ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1                                                                                                                                                                                                                                                         ; work         ;
+;             |add_sub_hvg:auto_generated|                                          ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1|add_sub_hvg:auto_generated                                                                                                                                                                                                                              ; work         ;
+;          |lpm_compare:trailing_zeros_limit_comparator|                            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator                                                                                                                                                                                                                                                         ; work         ;
+;             |cmpr_lmh:auto_generated|                                             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator|cmpr_lmh:auto_generated                                                                                                                                                                                                                                 ; work         ;
++-----------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                               ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated|altsyncram_7461:altsyncram4|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 3            ; 12           ; 3            ; 12           ; 36   ; None ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                       ;
++--------+---------------+---------+--------------+--------------+---------------------------------------+------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name  ; Version ; Release Date ; License Type ; Entity Instance                       ; IP Include File                                                                    ;
++--------+---------------+---------+--------------+--------------+---------------------------------------+------------------------------------------------------------------------------------+
+; Altera ; ALTFP_ADD_SUB ; 13.0    ; N/A          ; N/A          ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst ; C:/Users/VictorSantos/Documents/FPGA/projeto/projeto/common/fpsum/alt_fpaddsub.vhd ;
++--------+---------------+---------+--------------+--------------+---------------------------------------+------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 347   ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 31    ;
+; Number of registers using Asynchronous Clear ; 343   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 347   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                                        ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                                         ; Fan out ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated|dffe6 ; 12      ;
+; Total number of inverted registers = 1                                                                                                                                                    ;         ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                                                                                                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+------------+
+; Register Name                                                                                                                     ; Megafunction                                                                                                                            ; Type       ;
++-----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+------------+
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe4  ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe3  ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31 ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|sign_res_dffe4             ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|sign_res_dffe3             ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|sign_dffe31                ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|sticky_bit_dffe3           ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|sticky_bit_dffe31          ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|sticky_bit_dffe21          ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|round_bit_dffe3            ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|round_bit_dffe31           ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|round_bit_dffe21           ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|exp_res_dffe21[0..7]       ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|exp_res_dffe2[0..7]        ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
+; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|data_exp_dffe1[0..7]       ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0 ; SHIFT_TAPS ;
++-----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[17] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[21] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[23] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[25] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_6hb:rbarrel_shift|result[8]        ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|wire_w_man_add_sub_res_mag_dffe27_wo_range427w[24]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_6hb:rbarrel_shift|result[0]        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |fpsum|alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_6hb:rbarrel_shift|result[1]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0|shift_taps_51n:auto_generated|altsyncram_7461:altsyncram4 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                                                       ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                                                        ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 9           ; Signed Integer                                                                                                                    ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                           ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                                                                                                           ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                           ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                                                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                           ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                           ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                           ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                                           ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                           ;
+; CBXI_PARAMETER         ; add_sub_38g ; Untyped                                                                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                    ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub2 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 9           ; Signed Integer                                                                                                                    ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                           ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                                                                                                           ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                           ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                                                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                           ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                           ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                           ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                                           ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                           ;
+; CBXI_PARAMETER         ; add_sub_38g ; Untyped                                                                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                    ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 6           ; Signed Integer                                                                                                                    ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                           ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                                                                                                           ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                           ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                                                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                           ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                           ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                           ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                                           ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                           ;
+; CBXI_PARAMETER         ; add_sub_08g ; Untyped                                                                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                    ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 9           ; Signed Integer                                                                                                                    ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                           ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                                                                           ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                           ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                                                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                           ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                           ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                           ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                                           ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                           ;
+; CBXI_PARAMETER         ; add_sub_27g ; Untyped                                                                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                    ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 9           ; Signed Integer                                                                                                                    ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                           ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                                                                           ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                           ;
+; LPM_PIPELINE           ; 1           ; Signed Integer                                                                                                                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                           ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                           ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                           ;
+; USE_WYS                ; ON          ; Untyped                                                                                                                           ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                           ;
+; CBXI_PARAMETER         ; add_sub_bsi ; Untyped                                                                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                    ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub6 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 9           ; Signed Integer                                                                                                                    ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                           ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                                                                           ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                           ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                                                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                           ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                           ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                           ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                                           ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                           ;
+; CBXI_PARAMETER         ; add_sub_27g ; Untyped                                                                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                    ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                         ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 14          ; Signed Integer                                                                                                                               ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                      ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                                                      ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                      ;
+; LPM_PIPELINE           ; 1           ; Signed Integer                                                                                                                               ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                      ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                      ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                           ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                      ;
+; USE_WYS                ; ON          ; Untyped                                                                                                                                      ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                      ;
+; CBXI_PARAMETER         ; add_sub_qsk ; Untyped                                                                                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                               ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                          ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 14          ; Signed Integer                                                                                                                                ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                       ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                                                       ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                       ;
+; LPM_PIPELINE           ; 1           ; Signed Integer                                                                                                                                ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                       ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                       ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                       ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                            ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                       ;
+; USE_WYS                ; ON          ; Untyped                                                                                                                                       ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                       ;
+; CBXI_PARAMETER         ; add_sub_vdk ; Untyped                                                                                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                                ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper1 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                          ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 14          ; Signed Integer                                                                                                                                ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                       ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                                                       ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                       ;
+; LPM_PIPELINE           ; 1           ; Signed Integer                                                                                                                                ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                       ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                       ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                       ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                            ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                       ;
+; USE_WYS                ; ON          ; Untyped                                                                                                                                       ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                       ;
+; CBXI_PARAMETER         ; add_sub_vdk ; Untyped                                                                                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                                ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_lower ;
++------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                       ;
++------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 14          ; Signed Integer                                                                                                                             ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                    ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                                                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                    ;
+; LPM_PIPELINE           ; 1           ; Signed Integer                                                                                                                             ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                         ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                    ;
+; USE_WYS                ; ON          ; Untyped                                                                                                                                    ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                    ;
+; CBXI_PARAMETER         ; add_sub_qsk ; Untyped                                                                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                             ;
++------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper0 ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                        ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 14          ; Signed Integer                                                                                                                              ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                                                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                     ;
+; LPM_PIPELINE           ; 1           ; Signed Integer                                                                                                                              ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                          ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                     ;
+; USE_WYS                ; ON          ; Untyped                                                                                                                                     ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                     ;
+; CBXI_PARAMETER         ; add_sub_vdk ; Untyped                                                                                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                              ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper1 ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                        ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 14          ; Signed Integer                                                                                                                              ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                                                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                     ;
+; LPM_PIPELINE           ; 1           ; Signed Integer                                                                                                                              ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                          ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                     ;
+; USE_WYS                ; ON          ; Untyped                                                                                                                                     ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                     ;
+; CBXI_PARAMETER         ; add_sub_vdk ; Untyped                                                                                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                              ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                                    ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                                                                                          ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                                 ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                                                                                                 ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                                 ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                                                                          ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                                 ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                                 ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                                 ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                                 ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                                 ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                                      ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                                 ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                                                                 ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                                 ;
+; CBXI_PARAMETER         ; add_sub_8ng ; Untyped                                                                                                                                                 ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                                          ;
++------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1 ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                                                                     ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                                                                                           ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                                                                  ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                                                                                                  ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                                                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                                                                           ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                                                                  ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                                                                  ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                                                                       ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                                                                  ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                                                                  ;
+; STYLE                  ; FAST        ; Untyped                                                                                                                                                  ;
+; CBXI_PARAMETER         ; add_sub_hvg ; Untyped                                                                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                                                                           ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator ;
++------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                                                                      ;
++------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; lpm_width              ; 6          ; Signed Integer                                                                                                                                            ;
+; LPM_REPRESENTATION     ; SIGNED     ; Untyped                                                                                                                                                   ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                                                                            ;
+; CHAIN_SIZE             ; 8          ; Untyped                                                                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO         ; Untyped                                                                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL     ; Untyped                                                                                                                                                   ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                                                                                                                        ;
+; CASCADE_CHAIN_LENGTH   ; 2          ; CASCADE_CHAIN_LENGTH                                                                                                                                      ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                                                                   ;
+; CBXI_PARAMETER         ; cmpr_lmh   ; Untyped                                                                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                                                                            ;
++------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0 ;
++----------------+----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                                                                                                                 ;
++----------------+----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                                                                                                                              ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                                                                                                                              ;
+; TAP_DISTANCE   ; 3              ; Untyped                                                                                                                                                              ;
+; WIDTH          ; 12             ; Untyped                                                                                                                                                              ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                                                                                                                              ;
+; CBXI_PARAMETER ; shift_taps_51n ; Untyped                                                                                                                                                              ;
++----------------+----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                                                                                                                                ;
++----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Name                       ; Value                                                                                                                                                 ;
++----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Number of entity instances ; 1                                                                                                                                                     ;
+; Entity Instance            ; alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                                                                                                                     ;
+;     -- TAP_DISTANCE        ; 3                                                                                                                                                     ;
+;     -- WIDTH               ; 12                                                                                                                                                    ;
++----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Nov 11 19:32:58 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fpsum -c fpsum
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 44 design units, including 22 entities, in source file alt_fpaddsub.vhd
+    Info (12022): Found design unit 1: alt_fpaddsub_altbarrel_shift_h0e-RTL
+    Info (12022): Found design unit 2: alt_fpaddsub_altbarrel_shift_6hb-RTL
+    Info (12022): Found design unit 3: alt_fpaddsub_altpriority_encoder_3e8-RTL
+    Info (12022): Found design unit 4: alt_fpaddsub_altpriority_encoder_6e8-RTL
+    Info (12022): Found design unit 5: alt_fpaddsub_altpriority_encoder_be8-RTL
+    Info (12022): Found design unit 6: alt_fpaddsub_altpriority_encoder_3v7-RTL
+    Info (12022): Found design unit 7: alt_fpaddsub_altpriority_encoder_6v7-RTL
+    Info (12022): Found design unit 8: alt_fpaddsub_altpriority_encoder_bv7-RTL
+    Info (12022): Found design unit 9: alt_fpaddsub_altpriority_encoder_r08-RTL
+    Info (12022): Found design unit 10: alt_fpaddsub_altpriority_encoder_rf8-RTL
+    Info (12022): Found design unit 11: alt_fpaddsub_altpriority_encoder_qb6-RTL
+    Info (12022): Found design unit 12: alt_fpaddsub_altpriority_encoder_nh8-RTL
+    Info (12022): Found design unit 13: alt_fpaddsub_altpriority_encoder_qh8-RTL
+    Info (12022): Found design unit 14: alt_fpaddsub_altpriority_encoder_vh8-RTL
+    Info (12022): Found design unit 15: alt_fpaddsub_altpriority_encoder_fj8-RTL
+    Info (12022): Found design unit 16: alt_fpaddsub_altpriority_encoder_n28-RTL
+    Info (12022): Found design unit 17: alt_fpaddsub_altpriority_encoder_q28-RTL
+    Info (12022): Found design unit 18: alt_fpaddsub_altpriority_encoder_v28-RTL
+    Info (12022): Found design unit 19: alt_fpaddsub_altpriority_encoder_f48-RTL
+    Info (12022): Found design unit 20: alt_fpaddsub_altpriority_encoder_e48-RTL
+    Info (12022): Found design unit 21: alt_fpaddsub_altfp_add_sub_n1o-RTL
+    Info (12022): Found design unit 22: alt_fpaddsub-RTL
+    Info (12023): Found entity 1: alt_fpaddsub_altbarrel_shift_h0e
+    Info (12023): Found entity 2: alt_fpaddsub_altbarrel_shift_6hb
+    Info (12023): Found entity 3: alt_fpaddsub_altpriority_encoder_3e8
+    Info (12023): Found entity 4: alt_fpaddsub_altpriority_encoder_6e8
+    Info (12023): Found entity 5: alt_fpaddsub_altpriority_encoder_be8
+    Info (12023): Found entity 6: alt_fpaddsub_altpriority_encoder_3v7
+    Info (12023): Found entity 7: alt_fpaddsub_altpriority_encoder_6v7
+    Info (12023): Found entity 8: alt_fpaddsub_altpriority_encoder_bv7
+    Info (12023): Found entity 9: alt_fpaddsub_altpriority_encoder_r08
+    Info (12023): Found entity 10: alt_fpaddsub_altpriority_encoder_rf8
+    Info (12023): Found entity 11: alt_fpaddsub_altpriority_encoder_qb6
+    Info (12023): Found entity 12: alt_fpaddsub_altpriority_encoder_nh8
+    Info (12023): Found entity 13: alt_fpaddsub_altpriority_encoder_qh8
+    Info (12023): Found entity 14: alt_fpaddsub_altpriority_encoder_vh8
+    Info (12023): Found entity 15: alt_fpaddsub_altpriority_encoder_fj8
+    Info (12023): Found entity 16: alt_fpaddsub_altpriority_encoder_n28
+    Info (12023): Found entity 17: alt_fpaddsub_altpriority_encoder_q28
+    Info (12023): Found entity 18: alt_fpaddsub_altpriority_encoder_v28
+    Info (12023): Found entity 19: alt_fpaddsub_altpriority_encoder_f48
+    Info (12023): Found entity 20: alt_fpaddsub_altpriority_encoder_e48
+    Info (12023): Found entity 21: alt_fpaddsub_altfp_add_sub_n1o
+    Info (12023): Found entity 22: alt_fpaddsub
+Info (12021): Found 2 design units, including 1 entities, in source file fpsum.vhd
+    Info (12022): Found design unit 1: fpsum-behavioral
+    Info (12023): Found entity 1: fpsum
+Info (12021): Found 2 design units, including 1 entities, in source file tb_fpsum.vhd
+    Info (12022): Found design unit 1: tb_fsumadd-behavioral
+    Info (12023): Found entity 1: tb_fsumadd
+Info (12127): Elaborating entity "fpsum" for the top level hierarchy
+Info (12128): Elaborating entity "alt_fpaddsub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst"
+Info (12128): Elaborating entity "alt_fpaddsub_altfp_add_sub_n1o" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component"
+Info (12128): Elaborating entity "alt_fpaddsub_altbarrel_shift_h0e" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_h0e:lbarrel_shift"
+Info (12128): Elaborating entity "alt_fpaddsub_altbarrel_shift_6hb" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altbarrel_shift_6hb:rbarrel_shift"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_qb6" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_r08" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_r08:altpriority_encoder7"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_be8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_r08:altpriority_encoder7|alt_fpaddsub_altpriority_encoder_be8:altpriority_encoder10"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_6e8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_r08:altpriority_encoder7|alt_fpaddsub_altpriority_encoder_be8:altpriority_encoder10|alt_fpaddsub_altpriority_encoder_6e8:altpriority_encoder11"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_3e8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_r08:altpriority_encoder7|alt_fpaddsub_altpriority_encoder_be8:altpriority_encoder10|alt_fpaddsub_altpriority_encoder_6e8:altpriority_encoder11|alt_fpaddsub_altpriority_encoder_3e8:altpriority_encoder13"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_bv7" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_r08:altpriority_encoder7|alt_fpaddsub_altpriority_encoder_bv7:altpriority_encoder9"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_6v7" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_r08:altpriority_encoder7|alt_fpaddsub_altpriority_encoder_bv7:altpriority_encoder9|alt_fpaddsub_altpriority_encoder_6v7:altpriority_encoder15"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_3v7" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_r08:altpriority_encoder7|alt_fpaddsub_altpriority_encoder_bv7:altpriority_encoder9|alt_fpaddsub_altpriority_encoder_6v7:altpriority_encoder15|alt_fpaddsub_altpriority_encoder_3v7:altpriority_encoder17"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_rf8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_qb6:leading_zeroes_cnt|alt_fpaddsub_altpriority_encoder_rf8:altpriority_encoder8"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_e48" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_fj8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_vh8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder23"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_qh8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder23|alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder25"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_nh8" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_fj8:altpriority_encoder21|alt_fpaddsub_altpriority_encoder_vh8:altpriority_encoder23|alt_fpaddsub_altpriority_encoder_qh8:altpriority_encoder25|alt_fpaddsub_altpriority_encoder_nh8:altpriority_encoder27"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_f48" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_f48:altpriority_encoder22"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_v28" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_f48:altpriority_encoder22|alt_fpaddsub_altpriority_encoder_v28:altpriority_encoder30"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_q28" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_f48:altpriority_encoder22|alt_fpaddsub_altpriority_encoder_v28:altpriority_encoder30|alt_fpaddsub_altpriority_encoder_q28:altpriority_encoder32"
+Info (12128): Elaborating entity "alt_fpaddsub_altpriority_encoder_n28" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|alt_fpaddsub_altpriority_encoder_e48:trailing_zeros_cnt|alt_fpaddsub_altpriority_encoder_f48:altpriority_encoder22|alt_fpaddsub_altpriority_encoder_v28:altpriority_encoder30|alt_fpaddsub_altpriority_encoder_q28:altpriority_encoder32|alt_fpaddsub_altpriority_encoder_n28:altpriority_encoder34"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "SUB"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "9"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_38g.tdf
+    Info (12023): Found entity 1: add_sub_38g
+Info (12128): Elaborating entity "add_sub_38g" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub1|add_sub_38g:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub2"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub2"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub2" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "SUB"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "9"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "SUB"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "6"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_08g.tdf
+    Info (12023): Found entity 1: add_sub_08g
+Info (12128): Elaborating entity "add_sub_08g" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub3|add_sub_08g:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "ADD"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "9"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_27g.tdf
+    Info (12023): Found entity 1: add_sub_27g
+Info (12128): Elaborating entity "add_sub_27g" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub4|add_sub_27g:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "ADD"
+    Info (12134): Parameter "LPM_PIPELINE" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "9"
+    Info (12134): Parameter "lpm_hint" = "USE_WYS=ON"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_bsi.tdf
+    Info (12023): Found entity 1: add_sub_bsi
+Info (12128): Elaborating entity "add_sub_bsi" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub5|add_sub_bsi:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub6"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub6"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:add_sub6" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "ADD"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "9"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_PIPELINE" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "14"
+    Info (12134): Parameter "lpm_hint" = "USE_WYS=ON"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_qsk.tdf
+    Info (12023): Found entity 1: add_sub_qsk
+Info (12128): Elaborating entity "add_sub_qsk" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_lower|add_sub_qsk:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_PIPELINE" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "14"
+    Info (12134): Parameter "lpm_hint" = "USE_WYS=ON"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vdk.tdf
+    Info (12023): Found entity 1: add_sub_vdk
+Info (12128): Elaborating entity "add_sub_vdk" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper0|add_sub_vdk:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper1"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper1"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_2comp_res_upper1" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_PIPELINE" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "14"
+    Info (12134): Parameter "lpm_hint" = "USE_WYS=ON"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper0"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper0"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper0" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_PIPELINE" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "14"
+    Info (12134): Parameter "lpm_hint" = "USE_WYS=ON"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper1"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper1"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_add_sub_upper1" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_PIPELINE" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "14"
+    Info (12134): Parameter "lpm_hint" = "USE_WYS=ON"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "ADD"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "13"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8ng.tdf
+    Info (12023): Found entity 1: add_sub_8ng
+Info (12128): Elaborating entity "add_sub_8ng" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_lower|add_sub_8ng:auto_generated"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "ADD"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "13"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_hvg.tdf
+    Info (12023): Found entity 1: add_sub_hvg
+Info (12128): Elaborating entity "add_sub_hvg" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_add_sub:man_res_rounding_add_sub_upper1|add_sub_hvg:auto_generated"
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator"
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator" with the following parameter:
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "6"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "lpm_compare"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_lmh.tdf
+    Info (12023): Found entity 1: cmpr_lmh
+Info (12128): Elaborating entity "cmpr_lmh" for hierarchy "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|lpm_compare:trailing_zeros_limit_comparator|cmpr_lmh:auto_generated"
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|man_res_is_not_zero_dffe31_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 3
+        Info (286033): Parameter WIDTH set to 12
+Info (12130): Elaborated megafunction instantiation "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0"
+Info (12133): Instantiated megafunction "alt_fpaddsub:alt_fpaddsub_inst|alt_fpaddsub_altfp_add_sub_n1o:alt_fpaddsub_altfp_add_sub_n1o_component|altshift_taps:man_res_is_not_zero_dffe31_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "3"
+    Info (12134): Parameter "WIDTH" = "12"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_51n.tdf
+    Info (12023): Found entity 1: shift_taps_51n
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7461.tdf
+    Info (12023): Found entity 1: altsyncram_7461
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_gvd.tdf
+    Info (12023): Found entity 1: add_sub_gvd
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kkf.tdf
+    Info (12023): Found entity 1: cntr_kkf
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_6cc.tdf
+    Info (12023): Found entity 1: cmpr_6cc
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_74h.tdf
+    Info (12023): Found entity 1: cntr_74h
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 993 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 877 logic cells
+    Info (21064): Implemented 12 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4694 megabytes
+    Info: Processing ended: Sun Nov 11 19:33:03 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+
+

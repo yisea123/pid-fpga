@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="fpmult">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpmult|alt_fpmult:alt_fpmult_inst|alt_fpmult_altfp_mult_0gr:alt_fpmult_altfp_mult_0gr_component|lpm_mult:man_product2_mult" CBX_FILE_NAME="mult_2ft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpmult|alt_fpmult:alt_fpmult_inst|alt_fpmult_altfp_mult_0gr:alt_fpmult_altfp_mult_0gr_component|lpm_add_sub:exp_add_adder" CBX_FILE_NAME="add_sub_kgi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpmult|alt_fpmult:alt_fpmult_inst|alt_fpmult_altfp_mult_0gr:alt_fpmult_altfp_mult_0gr_component|lpm_add_sub:exp_adj_adder" CBX_FILE_NAME="add_sub_01h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpmult|alt_fpmult:alt_fpmult_inst|alt_fpmult_altfp_mult_0gr:alt_fpmult_altfp_mult_0gr_component|lpm_add_sub:exp_bias_subtr" CBX_FILE_NAME="add_sub_egg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpmult|alt_fpmult:alt_fpmult_inst|alt_fpmult_altfp_mult_0gr:alt_fpmult_altfp_mult_0gr_component|lpm_add_sub:man_round_adder" CBX_FILE_NAME="add_sub_cmg.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

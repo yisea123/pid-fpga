@@ -1,0 +1,73 @@
+
+library ieee;
+USE ieee.std_logic_1164.all;                                
+use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;
+
+--library ieee_proposed;
+--use ieee_proposed.float_pkg.all ;
+
+LIBRARY altera_mf;
+USE altera_mf.altera_mf_components.all;
+
+
+ENTITY tb_conv IS
+END tb_conv;
+
+ARCHITECTURE behavioral OF tb_conv IS
+  
+-- constants                                                 
+-- signals                                                   
+SIGNAL dataa :   STD_LOGIC_VECTOR (31 DOWNTO 0) := (others => '0');
+signal clock : std_logic := '0';
+SIGNAL result :   STD_LOGIC_VECTOR (31 DOWNTO 0); 
+   -- Clock frequency and signal
+constant clk_period : time := 20 ns;  
+  
+--signal sig_a, sig_b : float32;    
+    
+COMPONENT int2fp
+        PORT 
+  ( 
+	clock_sig	: IN STD_LOGIC ;
+	dataa_sig	: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+	result_sig	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+  ); 
+END COMPONENT;
+
+BEGIN
+
+  int2fp_inst : int2fp
+ PORT MAP (
+		clock_sig	 => clock,
+		dataa_sig	 => dataa,
+		result_sig	 => result,
+ );
+ 
+   clk_process :process
+   begin
+        clock <= '0';
+        wait for clk_period/2;
+        clock <= '1';
+        wait for clk_period/2;
+   end process clk_process; 
+ 
+    stim_proc: process                                              
+    BEGIN    
+   
+		dataa <= "00000000000000000000000100111000"; --312
+        wait for clk_period*10;
+        dataa <= "00000000000000000000010111011000"; --1496
+        wait for clk_period*10;
+        dataa <= "11111111111111111111111100100011 "; ---221
+        wait for clk_period*10;
+        dataa <= " 00000000000000000000000001011110"; --94  
+        wait for clk_period*10;
+        dataa <= "00000000000000000000000010001001"; --137
+   
+        WAIT;            
+    END PROCESS stim_proc;   
+
+  
+END behavioral;
+

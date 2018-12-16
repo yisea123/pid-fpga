@@ -1,0 +1,36 @@
+|n_trigger_counter
+clk => current_counter[0].CLK
+clk => current_counter[1].CLK
+clk => current_counter[2].CLK
+clk => current_counter[3].CLK
+clk => current_counter[4].CLK
+clk => current_counter[5].CLK
+clk => current_counter[6].CLK
+clk => current_counter[7].CLK
+rst => current_counter[0].ACLR
+rst => current_counter[1].ACLR
+rst => current_counter[2].ACLR
+rst => current_counter[3].ACLR
+rst => current_counter[4].ACLR
+rst => current_counter[5].ACLR
+rst => current_counter[6].ACLR
+rst => current_counter[7].ACLR
+count[0] => Add1.IN16
+count[1] => Add1.IN15
+count[2] => Add1.IN14
+count[3] => Add1.IN13
+count[4] => Add1.IN12
+count[5] => Add1.IN11
+count[6] => Add1.IN10
+count[7] => Add1.IN9
+en => current_counter[7].ENA
+en => current_counter[6].ENA
+en => current_counter[5].ENA
+en => current_counter[4].ENA
+en => current_counter[3].ENA
+en => current_counter[2].ENA
+en => current_counter[1].ENA
+en => current_counter[0].ENA
+trigger <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

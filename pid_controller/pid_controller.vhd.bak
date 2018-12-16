@@ -1,0 +1,434 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity pid_controller is 
+
+generic (
+       n_pps_interrupt_counter : positive := 32;
+       n_max_rpm : positive := 32; --max: 71400 -> 210 rpm
+		 n_arithmetics_width: positive := 32;
+		 n_pwm_res : positive :=8;
+		 n_max_delay: positive := 8;
+		 n_cmd_width: positive := 2
+); 
+port (
+	--common
+	clk, rst : in std_logic;
+	
+	--inputs
+	cmd: in std_logic_vector(n_cmd_width-1 downto 0);
+	user_rpm: in std_logic_vector(n_arithmetics_width-1 downto 0);
+	pps_interrupt_in : in std_logic_vector(n_arithmetics_width-1 downto 0);
+	encoder_in: in std_logic;
+	
+	--debug output
+	encoder_count: out std_logic_vector(n_max_rpm-1 downto 0);
+	current_rpm : out std_logic_vector(n_max_rpm - 1 downto 0);
+	pid_out: out std_logic_vector(n_arithmetics_width-1 downto 0);
+	state_debug: out std_logic_vector(7 downto 0);
+	
+	--block outputs
+	operational_error : out std_logic;
+	pwm_out: out std_logic
+);
+end top_level;
+
+architecture behavioral of pid_controller is
+
+component control_unit
+	generic (
+		 n_max_delay: positive := 8;
+		 n_cmd_width: positive := 2
+); 
+	port (
+		--common
+		clk, rst : in std_logic;
+		rst_pps_interrupt : out std_logic; --used at the moment the pwm is applied to the motor
+		rst_encoder_pulse_counter : out std_logic;  
+
+		--inputs
+		cmd: in std_logic_vector(n_cmd_width-1 downto 0);
+
+		--control inputs
+      pps_interrupt_trigger : in std_logic; --1s interrupt to calculate pps
+		delay_counter_trigger : in std_logic;  
+
+		--error inputs
+		--encoder
+		pps_diff_error: in std_logic;
+		const_mult_error: in std_logic;
+		--pid
+		current_error_diff_error : in std_logic;			
+		kp_mult_error: in std_logic;			
+		ki_mult_error: in std_logic;		
+		kd_mult_error : in std_logic;
+		ki_sum_error : in std_logic;
+		kd_diff_error: in std_logic;		
+		ki_kd_sum_error: in std_logic;		
+		kp_ki_kd_sum_error: in std_logic; 
+		pid_fpconversion_error : in std_logic;
+		pwm_complement_ovf: in std_logic;
+		
+		--control outputs
+		--encoder
+		en_pps_interrupt : out std_logic;
+ 		en_pps_diff: out std_logic;
+		en_const_mult: out std_logic;
+		en_pps_conversion: out std_logic;
+		en_pid_fpconversion: out std_logic;
+		en_pwm_complement : out std_logic;
+		
+		load_current_pps : out std_logic; --rps stands for revolutions per seconds
+		load_prev_pps : out std_logic;
+	
+		--pid
+		en_diff_current_error: out std_logic;
+		en_sum_ki: out std_logic;
+		en_diff_kd: out std_logic;
+		en_mult : out std_logic;
+		en_sum_ki_kd : out std_logic;
+		en_sum_kp_ki_kd : out std_logic;
+		
+		load_user_rpm: out std_logic;
+		load_pps_interrupt_in: out std_logic;
+		load_current_rpm: out std_logic;
+		load_total_error: out std_logic;
+		load_last_error: out std_logic;
+		load_kp_mult_reg: out std_logic;
+		load_pid_res: out std_logic;
+		
+		--control the number of waiting cycles per arith operation
+      en_delay_counter : out std_logic; 
+		delay_counter_in: out std_logic_vector(n_max_delay-1 downto 0);
+
+		--block output
+		operational_error : out std_logic;
+		
+		--debug output
+		state_debug: out std_logic_vector(7 downto 0)
+	);
+end component;
+
+
+component operational_unit
+	generic (
+       n_pps_interrupt_counter : positive := 32;
+       n_max_rpm : positive := 32; --max: 71400 -> 210 rpm
+		 n_arithmetics_width: positive := 32;
+		 n_pwm_res : positive :=8;
+		 n_max_delay: positive := 8
+); 
+	port (
+		--common
+		clk, rst : in std_logic;
+		rst_pps_interrupt : in std_logic; --used at the moment the pwm is applied to the motor
+		rst_encoder_pulse_counter: in std_logic;
+
+
+		--block inputs
+		--common
+		delay_counter_in: in std_logic_vector(n_max_delay-1 downto 0);
+		encoder_in : in std_logic;
+		user_rpm: in std_logic_vector(n_arithmetics_width-1 downto 0);
+		pps_interrupt_in : in std_logic_vector(n_pps_interrupt_counter-1 downto 0);
+		
+		--control inputs
+		--common
+		en_delay_counter : in std_logic;
+		
+		--encoder
+		en_pps_interrupt : in std_logic;
+		en_pps_diff: in std_logic;
+		en_const_mult: in std_logic;
+		en_pps_conversion: in std_logic;
+
+		
+		load_current_pps : in std_logic; --rps stands for revolutions per seconds
+		load_prev_pps : in std_logic;
+	
+		--pid
+		en_diff_current_error: in std_logic;
+		en_sum_ki: in std_logic;
+		en_diff_kd: in std_logic;
+		en_mult : in std_logic;
+		en_sum_ki_kd : in std_logic;
+		en_sum_kp_ki_kd : in std_logic;
+		en_pid_fpconversion: in std_logic;
+		en_pwm_complement : in std_logic;	
+		
+		load_user_rpm: in std_logic;
+		load_pps_interrupt_in : in std_logic;
+		load_current_rpm: in std_logic;
+		load_total_error: in std_logic;
+		load_last_error: in std_logic;
+		load_kp_mult_reg: in std_logic;
+		load_pid_res: in std_logic;
+		
+	
+		--arithmetic blocks outputs
+		--encoder
+		pps_diff_error: out std_logic;
+		const_mult_error: out std_logic;
+ 
+		--pid
+		current_error_diff_error : out std_logic;			
+		kp_mult_error: out std_logic;			
+		ki_mult_error: out std_logic;		
+		kd_mult_error : out std_logic;
+		ki_sum_error : out std_logic;
+		kd_diff_error: out std_logic;		
+		ki_kd_sum_error: out std_logic;		
+		kp_ki_kd_sum_error: out std_logic; 
+		pid_fpconversion_error : out std_logic;
+		pwm_complement_ovf: out std_logic;
+		
+      --control outputs
+      pps_interrupt_trigger : out std_logic; --1s interrupt to calculate encoder pps
+		delay_counter_trigger : out std_logic;  --used to count clock cycles inside arithmetic processes
+		
+		--debug outputs
+		current_rpm : out std_logic_vector(n_max_rpm - 1 downto 0);
+		pid_out: out std_logic_vector(n_arithmetics_width-1 downto 0);
+		encoder_count: out std_logic_vector(n_arithmetics_width-1 downto 0);
+	
+		--block outputs
+		pwm_out: out std_logic
+
+	);
+end component;
+
+
+-- constants   
+constant const_n_pwm_res : positive := 8;
+constant const_n_arithmetics_width : positive := 32;      
+constant const_n_pps_interrupt_counter : positive := 32;      
+constant const_n_max_rpm : positive := 32;      
+constant const_n_max_delay : positive := 8;      
+constant const_n_cmd_width: integer := 2;
+
+--  input signals                                                   
+signal encoder_in_sig : std_logic;
+signal rst_pps_interrupt_sig : std_logic;
+signal en_pps_interrupt_sig : std_logic;
+signal user_rpm_sig : std_logic_vector(const_n_arithmetics_width-1 downto 0);
+signal pps_interrupt_in_sig :std_logic_vector(const_n_pps_interrupt_counter-1 downto 0);
+
+signal current_rpm_sig : std_logic_vector(const_n_arithmetics_width-1 downto 0);
+signal en_diff_current_error_sig: std_logic;
+signal en_sum_ki_sig: std_logic;
+signal en_diff_kd_sig: std_logic;
+signal en_mult_sig : std_logic;
+signal en_sum_ki_kd_sig : std_logic;
+signal en_sum_kp_ki_kd_sig : std_logic;
+signal en_pwm_complement_sig: std_logic;
+signal en_pid_fpconversion_sig : std_logic;
+signal load_user_rpm_sig : std_logic;
+signal load_current_rpm_sig : std_logic;
+signal load_total_error_sig : std_logic;
+signal load_last_error_sig : std_logic;
+signal load_kp_mult_reg_sig : std_logic;
+signal load_pid_res_sig : std_logic;
+signal load_pps_interrupt_in_sig : std_logic;
+
+--control inputs
+signal en_pps_diff_sig:  std_logic;
+signal en_const_mult_sig:  std_logic;
+signal en_pps_conversion_sig:  std_logic;
+
+signal load_current_pps_sig : std_logic;
+signal load_prev_pps_sig : std_logic;
+
+ --control outputs
+signal pps_diff_error_sig : std_logic;
+signal const_mult_error_sig : std_logic;
+ 
+ --counter signals
+ signal pps_interrupt_trigger_sig : std_logic;
+
+ --control outputs
+signal  delay_counter_in_sig : std_logic_vector(n_max_delay-1 downto 0);
+signal  en_delay_counter_sig : std_logic;
+signal  delay_counter_trigger_sig : std_logic;
+
+signal  current_error_diff_error_sig : std_logic; 
+signal  kp_mult_error_sig : std_logic;
+signal  ki_mult_error_sig : std_logic;
+signal  kd_mult_error_sig : std_logic;
+signal  ki_sum_error_sig : std_logic;
+signal  kd_diff_error_sig : std_logic;
+signal  ki_kd_sum_error_sig : std_logic;
+signal  kp_ki_kd_sum_error_sig : std_logic;
+signal  pid_fpconversion_error_sig:  std_logic;		
+signal  pwm_complement_ovf_sig : std_logic;
+
+ signal pid_out_sig : std_logic_vector(const_n_arithmetics_width - 1 downto 0);
+ signal rst_encoder_pulse_counter_sig : std_logic;
+ signal encoder_count_sig:std_logic_vector(const_n_arithmetics_width-1 downto 0);
+ signal pwm_out_sig : std_logic; 
+
+begin
+
+control_unit_inst : control_unit
+	generic map (
+		n_max_delay => const_n_max_delay,
+		n_cmd_width => const_n_cmd_width
+	)
+	port map (
+-- list connections between master ports and signals
+		clk => clk,
+		rst => rst,
+		rst_pps_interrupt => rst_pps_interrupt_sig, --used at the moment the pwm is applied to the motor
+		rst_encoder_pulse_counter =>  rst_encoder_pulse_counter_sig,
+
+		--inputs
+		cmd => cmd,
+		
+	   --control inputs
+      pps_interrupt_trigger => pps_interrupt_trigger_sig,
+		delay_counter_trigger => delay_counter_trigger_sig,  	
+	
+		--error inputs
+		--encoder
+		pps_diff_error => pps_diff_error_sig,
+		const_mult_error => const_mult_error_sig,
+		--pid
+		current_error_diff_error => current_error_diff_error_sig,			
+		kp_mult_error => kp_mult_error_sig,			
+		ki_mult_error => ki_mult_error_sig,		
+		kd_mult_error => kd_mult_error_sig,
+		ki_sum_error => ki_sum_error_sig,
+		kd_diff_error => kd_diff_error_sig,		
+		ki_kd_sum_error => ki_kd_sum_error_sig,		
+		kp_ki_kd_sum_error => kp_ki_kd_sum_error_sig, 
+		pid_fpconversion_error => pid_fpconversion_error_sig,
+		pwm_complement_ovf => pwm_complement_ovf_sig,
+		
+		--control outputs
+		--encoder
+		en_pps_interrupt => en_pps_interrupt_sig,
+ 		en_pps_diff => en_pps_diff_sig,
+		en_const_mult => en_const_mult_sig,
+		en_pps_conversion => en_pps_conversion_sig,
+		en_pid_fpconversion => en_pid_fpconversion_sig,
+		en_pwm_complement => en_pwm_complement_sig,
+		
+		load_current_pps => load_current_pps_sig, --rps stands for revolutions per seconds
+		load_prev_pps => load_prev_pps_sig,
+	
+		--pid
+		en_diff_current_error => en_diff_current_error_sig,
+		en_sum_ki => en_sum_ki_sig,
+		en_diff_kd => en_diff_kd_sig,
+		en_mult => en_mult_sig,
+		en_sum_ki_kd => en_sum_ki_kd_sig,
+		en_sum_kp_ki_kd => en_sum_kp_ki_kd_sig,
+		
+		load_user_rpm => load_user_rpm_sig,
+		load_pps_interrupt_in => load_pps_interrupt_in_sig,
+		load_current_rpm => load_current_rpm_sig,
+		load_total_error => load_total_error_sig,
+		load_last_error => load_last_error_sig,
+		load_kp_mult_reg=> load_kp_mult_reg_sig,
+		load_pid_res => load_pid_res_sig,
+		
+		--control the number of waiting cycles per arith operation
+      delay_counter_in => delay_counter_in_sig,
+      en_delay_counter => en_delay_counter_sig,
+		
+		--block output
+		operational_error => operational_error, 
+		
+		--debug output
+		state_debug => state_debug
+	);
+
+
+operational_unit_inst : operational_unit
+    generic map (
+		  n_pps_interrupt_counter => const_n_pps_interrupt_counter,
+        n_max_rpm => const_n_arithmetics_width,
+        n_arithmetics_width => const_n_arithmetics_width,
+		  n_pwm_res => const_n_pwm_res,
+		  n_max_delay => const_n_max_delay
+		  )
+    
+	port map (
+		--common
+      clk => clk,
+      rst => rst,
+	
+		rst_pps_interrupt => rst_pps_interrupt_sig,
+		rst_encoder_pulse_counter => rst_encoder_pulse_counter_sig,
+
+		--block inputs
+		--common
+		delay_counter_in => delay_counter_in_sig,
+		encoder_in => encoder_in,
+		user_rpm => user_rpm,
+		pps_interrupt_in => pps_interrupt_in,
+		
+		--control inputs
+		--common
+		en_delay_counter => en_delay_counter_sig,
+		
+		--encoder
+		en_pps_interrupt => en_pps_interrupt_sig,
+		en_pps_diff => en_pps_diff_sig,
+		en_const_mult => en_const_mult_sig,
+		en_pps_conversion => en_pps_conversion_sig,
+
+		load_current_pps => load_current_pps_sig, --rps stands for revolutions per seconds
+		load_prev_pps => load_prev_pps_sig,
+	
+		--pid
+		en_diff_current_error => en_diff_current_error_sig,
+		en_sum_ki => en_sum_ki_sig,
+		en_diff_kd => en_diff_kd_sig,
+		en_mult => en_mult_sig,
+		en_sum_ki_kd => en_sum_ki_kd_sig,
+		en_sum_kp_ki_kd => en_sum_kp_ki_kd_sig,
+		en_pid_fpconversion => en_pid_fpconversion_sig,
+		en_pwm_complement => en_pwm_complement_sig,
+		
+		load_user_rpm => load_user_rpm_sig,
+		load_pps_interrupt_in => load_pps_interrupt_in_sig ,
+		load_current_rpm => load_current_rpm_sig,
+		load_total_error => load_total_error_sig,
+		load_last_error => load_last_error_sig,
+		load_kp_mult_reg => load_kp_mult_reg_sig,
+		load_pid_res => load_pid_res_sig,
+		
+	
+		--arithmetic blocks outputs
+		--encoder
+		pps_diff_error => pps_diff_error_sig,
+		const_mult_error => const_mult_error_sig,
+ 
+		--pid
+		current_error_diff_error => current_error_diff_error_sig,	
+		kp_mult_error => kp_mult_error_sig,		
+		ki_mult_error => ki_mult_error_sig,	
+		kd_mult_error => kd_mult_error_sig,
+		ki_sum_error => ki_sum_error_sig,
+		kd_diff_error => kd_diff_error_sig,
+		ki_kd_sum_error => ki_kd_sum_error_sig,
+		kp_ki_kd_sum_error => kp_ki_kd_sum_error_sig,
+		pid_fpconversion_error => pid_fpconversion_error_sig,
+		pwm_complement_ovf => pwm_complement_ovf_sig,
+		
+      --control outputs
+      pps_interrupt_trigger => pps_interrupt_trigger_sig,--1s interrupt to calculate encoder pps
+		delay_counter_trigger => delay_counter_trigger_sig,  --used to count clock cycles inside arithmetic processes
+		
+		--debug outputs
+		current_rpm => current_rpm,
+		pid_out => pid_out,
+		encoder_count => encoder_count,
+	
+		--block outputs
+		pwm_out => pwm_out
+			
+);
+
+end behavioral;

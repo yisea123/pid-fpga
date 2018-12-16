@@ -1,0 +1,81 @@
+
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all;                                
+use ieee.numeric_std.all;
+
+ENTITY tb_n_counter IS
+END tb_n_counter;
+ARCHITECTURE behavioral OF tb_n_counter IS
+-- constants      
+constant n_bits: positive := 32;                                           
+-- signals                                                   
+SIGNAL count_sig : STD_LOGIC_VECTOR(n_bits-1 DOWNTO 0) := (others => '0');
+SIGNAL enable_sig : STD_LOGIC := '1';
+signal dir_sig : STD_LOGIC := '0';
+signal clock_sig : STD_LOGIC := '0';
+signal reset_sig : STD_LOGIC := '0';
+
+constant num_cycles : integer := 91600; --simulating encoder pulses (max + 200)
+constant clk_period : time := 20 ns;  
+
+COMPONENT n_counter
+	generic (
+      n: positive := 32
+    );
+	PORT (
+         count   :out std_logic_vector (n-1 downto 0); -- Output of the counter
+         enable :in  std_logic;                     -- Enable counting
+         clk    :in  std_logic;                     -- Input clock
+         dir    : in std_logic; --0/1: up/down
+         reset  :in  std_logic                      -- Input reset
+	);
+END COMPONENT;
+
+BEGIN
+	n_counter_inst : n_counter PORT MAP (
+	count => count_sig, 
+	enable => enable_sig, 
+	clk => clock_sig, 
+	dir => dir_sig, 
+	reset => reset_sig
+	);
+	
+	   -- clk_process :process
+   -- begin
+        -- clock_sig <= '0';
+        -- wait for clk_period/2;
+        -- clock_sig <= '1';
+        -- wait for clk_period/2;
+   -- end process clk_process; 
+	
+	
+    clk_proc : process 
+    begin
+        clock_sig <= '0';
+        wait for clk_period/2;
+        clock_sig <= '1';
+        wait for clk_period/2;
+    end process clk_proc;    
+    
+    stim_proc : PROCESS                                              
+                                    
+    BEGIN 
+ -- code executes for every event on sensitivity list
+		  reset_sig <= '1';
+		  wait for clk_period;
+		  reset_sig <= '0';
+		  dir_sig <= '0';
+		  
+          wait for 1431992461 ps;
+          dir_sig <= '1';
+          
+--      for i in 1 to num_cycles loop
+--      clock_sig <= not clock_sig;
+--      wait for clk_period/2;
+--      clock_sig <= not clock_sig;
+--      wait for clk_period/2;
+--  end loop;
+				
+        WAIT;                                                        
+    END PROCESS stim_proc;                                             
+END behavioral;

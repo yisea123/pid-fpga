@@ -1,0 +1,1602 @@
+TimeQuest Timing Analyzer report for control_unit
+Tue Nov 27 11:42:14 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'clock'
+ 13. Slow Model Hold: 'clock'
+ 14. Slow Model Minimum Pulse Width: 'clock'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Propagation Delay
+ 20. Minimum Propagation Delay
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'clock'
+ 27. Fast Model Hold: 'clock'
+ 28. Fast Model Minimum Pulse Width: 'clock'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Propagation Delay
+ 34. Minimum Propagation Delay
+ 35. Multicorner Timing Analysis Summary
+ 36. Setup Times
+ 37. Hold Times
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Progagation Delay
+ 41. Minimum Progagation Delay
+ 42. Setup Transfers
+ 43. Hold Transfers
+ 44. Report TCCS
+ 45. Report RSKM
+ 46. Unconstrained Paths
+ 47. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; control_unit                                                      ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672I8                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------+
+; SDC File List                                        ;
++------------------+--------+--------------------------+
+; SDC File Path    ; Status ; Read at                  ;
++------------------+--------+--------------------------+
+; control_unit.sdc ; OK     ; Tue Nov 27 11:42:14 2018 ;
++------------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clock      ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 134.05 MHz ; 134.05 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; 12.540 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.499 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clock ; 8.758 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                            ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 12.540 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.002     ; 7.498      ;
+; 12.540 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.002     ; 7.498      ;
+; 12.615 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.002     ; 7.423      ;
+; 13.013 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.010     ; 7.017      ;
+; 13.013 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.010     ; 7.017      ;
+; 13.088 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.010     ; 6.942      ;
+; 13.380 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.010     ; 6.650      ;
+; 13.380 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.010     ; 6.650      ;
+; 13.455 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.010     ; 6.575      ;
+; 13.463 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.011     ; 6.566      ;
+; 13.463 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.011     ; 6.566      ;
+; 13.481 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.011     ; 6.548      ;
+; 13.481 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.011     ; 6.548      ;
+; 13.538 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.011     ; 6.491      ;
+; 13.556 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.011     ; 6.473      ;
+; 13.798 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.011     ; 6.231      ;
+; 13.798 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.011     ; 6.231      ;
+; 13.873 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.011     ; 6.156      ;
+; 13.893 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.002     ; 6.145      ;
+; 13.893 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.002     ; 6.145      ;
+; 13.968 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.002     ; 6.070      ;
+; 14.203 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.010     ; 5.827      ;
+; 14.203 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.010     ; 5.827      ;
+; 14.278 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.010     ; 5.752      ;
+; 14.534 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.012     ; 5.494      ;
+; 14.534 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.012     ; 5.494      ;
+; 14.609 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.012     ; 5.419      ;
+; 14.876 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; 0.000      ; 5.164      ;
+; 14.876 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; 0.000      ; 5.164      ;
+; 14.951 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; 0.000      ; 5.089      ;
+; 15.029 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.012     ; 4.999      ;
+; 15.029 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.012     ; 4.999      ;
+; 15.104 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.012     ; 4.924      ;
+; 16.013 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.010     ; 4.017      ;
+; 16.013 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.010     ; 4.017      ;
+; 16.088 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.010     ; 3.942      ;
+; 16.703 ; current_state.ST_PID_COMB_LOGIC           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 20.000       ; 0.010      ; 3.347      ;
+; 16.967 ; current_state.ST_UPDATE_CURRENT_RPM       ; current_state.ST_CURRENT_ERROR_DIFF       ; clock        ; clock       ; 20.000       ; 0.000      ; 3.073      ;
+; 17.235 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; 0.000      ; 2.805      ;
+; 17.235 ; current_state.ST_IDLE                     ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; 0.000      ; 2.805      ;
+; 17.310 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; 0.000      ; 2.730      ;
+; 17.765 ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; current_state.ST_UPDATE_PID               ; clock        ; clock       ; 20.000       ; -0.010     ; 2.265      ;
+; 17.807 ; current_state.ST_MULT_PID_CONST           ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 20.000       ; -0.001     ; 2.232      ;
+; 17.908 ; current_state.ST_PID_INT_CONVERSION       ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 20.000       ; 0.000      ; 2.132      ;
+; 17.914 ; current_state.ST_PPS_CONVERSION           ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 20.000       ; 0.010      ; 2.136      ;
+; 17.919 ; current_state.ST_IDLE                     ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; 0.000      ; 2.121      ;
+; 17.993 ; current_state.ST_SUM_KP_KI_KD             ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 20.000       ; 0.001      ; 2.048      ;
+; 18.105 ; current_state.ST_LOAD_CURRENT_PPS         ; current_state.ST_PPS_CONVERSION           ; clock        ; clock       ; 20.000       ; -0.010     ; 1.925      ;
+; 18.129 ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; current_state.ST_EN_PPS_COUNTER           ; clock        ; clock       ; 20.000       ; 0.010      ; 1.921      ;
+; 18.146 ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; current_state.ST_SUM_KI_KD                ; clock        ; clock       ; 20.000       ; 0.001      ; 1.895      ;
+; 18.159 ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; current_state.ST_SUM_KI_DIFF_KD           ; clock        ; clock       ; 20.000       ; 0.000      ; 1.881      ;
+; 18.192 ; current_state.ST_SUM_KI_KD                ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 20.000       ; 0.000      ; 1.848      ;
+; 18.263 ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; current_state.ST_PPS_DIFF                 ; clock        ; clock       ; 20.000       ; -0.008     ; 1.769      ;
+; 18.267 ; current_state.ST_CONST_MULT               ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 20.000       ; 0.008      ; 1.781      ;
+; 18.287 ; current_state.ST_CURRENT_ERROR_DIFF       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 20.000       ; 0.001      ; 1.754      ;
+; 18.470 ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; current_state.ST_PID_INT_CONVERSION       ; clock        ; clock       ; 20.000       ; 0.000      ; 1.570      ;
+; 18.473 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.567      ;
+; 18.477 ; current_state.ST_LOAD_USER_RPM            ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; 0.000      ; 1.563      ;
+; 18.487 ; current_state.ST_SUM_KI_DIFF_KD           ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 20.000       ; 0.000      ; 1.553      ;
+; 18.491 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.549      ;
+; 18.521 ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; current_state.ST_CONST_MULT               ; clock        ; clock       ; 20.000       ; 0.000      ; 1.519      ;
+; 18.532 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; 0.000      ; 1.508      ;
+; 18.544 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.496      ;
+; 18.545 ; current_state.ST_EN_PPS_COUNTER           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 20.000       ; 0.000      ; 1.495      ;
+; 18.573 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.467      ;
+; 18.590 ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; current_state.ST_PID_COMB_LOGIC           ; clock        ; clock       ; 20.000       ; -0.002     ; 1.448      ;
+; 18.620 ; current_state.ST_RESET                    ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; -0.011     ; 1.409      ;
+; 18.790 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; clock        ; clock       ; 20.000       ; 0.000      ; 1.250      ;
+; 18.792 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_CURRENT_PPS         ; clock        ; clock       ; 20.000       ; 0.000      ; 1.248      ;
+; 18.796 ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; current_state.ST_UPDATE_CURRENT_RPM       ; clock        ; clock       ; 20.000       ; 0.000      ; 1.244      ;
+; 18.808 ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; current_state.ST_MULT_PID_CONST           ; clock        ; clock       ; 20.000       ; 0.000      ; 1.232      ;
+; 18.815 ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; current_state.ST_SUM_KP_KI_KD             ; clock        ; clock       ; 20.000       ; 0.000      ; 1.225      ;
+; 18.952 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.088      ;
+; 18.954 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.086      ;
+; 18.964 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.076      ;
+; 18.964 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; clock        ; clock       ; 20.000       ; 0.000      ; 1.076      ;
+; 18.965 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.075      ;
+; 18.981 ; current_state.ST_PPS_DIFF                 ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 20.000       ; 0.000      ; 1.059      ;
+; 18.984 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; clock        ; clock       ; 20.000       ; 0.000      ; 1.056      ;
+; 18.987 ; current_state.ST_UPDATE_PID               ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 20.000       ; 0.000      ; 1.053      ;
+; 19.235 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
+; 19.235 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 20.000       ; 0.000      ; 0.805      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                            ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.747 ; current_state.ST_UPDATE_PID               ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 0.000        ; 0.000      ; 1.053      ;
+; 0.750 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.056      ;
+; 0.753 ; current_state.ST_PPS_DIFF                 ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.059      ;
+; 0.769 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.075      ;
+; 0.770 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.076      ;
+; 0.770 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.076      ;
+; 0.780 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.086      ;
+; 0.782 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.088      ;
+; 0.816 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.122      ;
+; 0.816 ; current_state.ST_IDLE                     ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; 0.000      ; 1.122      ;
+; 0.919 ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; current_state.ST_SUM_KP_KI_KD             ; clock        ; clock       ; 0.000        ; 0.000      ; 1.225      ;
+; 0.926 ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; current_state.ST_MULT_PID_CONST           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.232      ;
+; 0.938 ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; current_state.ST_UPDATE_CURRENT_RPM       ; clock        ; clock       ; 0.000        ; 0.000      ; 1.244      ;
+; 0.942 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_CURRENT_PPS         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.248      ;
+; 0.944 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.250      ;
+; 1.114 ; current_state.ST_RESET                    ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; -0.011     ; 1.409      ;
+; 1.144 ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; current_state.ST_PID_COMB_LOGIC           ; clock        ; clock       ; 0.000        ; -0.002     ; 1.448      ;
+; 1.161 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.467      ;
+; 1.189 ; current_state.ST_EN_PPS_COUNTER           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 0.000        ; 0.000      ; 1.495      ;
+; 1.190 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.496      ;
+; 1.202 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.508      ;
+; 1.213 ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; current_state.ST_CONST_MULT               ; clock        ; clock       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.243 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.549      ;
+; 1.247 ; current_state.ST_SUM_KI_DIFF_KD           ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.553      ;
+; 1.257 ; current_state.ST_LOAD_USER_RPM            ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.563      ;
+; 1.261 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.567      ;
+; 1.264 ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; current_state.ST_PID_INT_CONVERSION       ; clock        ; clock       ; 0.000        ; 0.000      ; 1.570      ;
+; 1.447 ; current_state.ST_CURRENT_ERROR_DIFF       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 0.000        ; 0.001      ; 1.754      ;
+; 1.467 ; current_state.ST_CONST_MULT               ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 0.000        ; 0.008      ; 1.781      ;
+; 1.471 ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; current_state.ST_PPS_DIFF                 ; clock        ; clock       ; 0.000        ; -0.008     ; 1.769      ;
+; 1.542 ; current_state.ST_SUM_KI_KD                ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.848      ;
+; 1.575 ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; current_state.ST_SUM_KI_DIFF_KD           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.881      ;
+; 1.588 ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; current_state.ST_SUM_KI_KD                ; clock        ; clock       ; 0.000        ; 0.001      ; 1.895      ;
+; 1.605 ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; current_state.ST_EN_PPS_COUNTER           ; clock        ; clock       ; 0.000        ; 0.010      ; 1.921      ;
+; 1.629 ; current_state.ST_LOAD_CURRENT_PPS         ; current_state.ST_PPS_CONVERSION           ; clock        ; clock       ; 0.000        ; -0.010     ; 1.925      ;
+; 1.741 ; current_state.ST_SUM_KP_KI_KD             ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 0.000        ; 0.001      ; 2.048      ;
+; 1.815 ; current_state.ST_IDLE                     ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.121      ;
+; 1.820 ; current_state.ST_PPS_CONVERSION           ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 0.000        ; 0.010      ; 2.136      ;
+; 1.826 ; current_state.ST_PID_INT_CONVERSION       ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.132      ;
+; 1.900 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.206      ;
+; 1.927 ; current_state.ST_MULT_PID_CONST           ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 0.000        ; -0.001     ; 2.232      ;
+; 1.969 ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; current_state.ST_UPDATE_PID               ; clock        ; clock       ; 0.000        ; -0.010     ; 2.265      ;
+; 2.767 ; current_state.ST_UPDATE_CURRENT_RPM       ; current_state.ST_CURRENT_ERROR_DIFF       ; clock        ; clock       ; 0.000        ; 0.000      ; 3.073      ;
+; 3.031 ; current_state.ST_PID_COMB_LOGIC           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 0.000        ; 0.010      ; 3.347      ;
+; 3.646 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.010     ; 3.942      ;
+; 3.721 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.010     ; 4.017      ;
+; 3.721 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.010     ; 4.017      ;
+; 4.630 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.012     ; 4.924      ;
+; 4.705 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.012     ; 4.999      ;
+; 4.705 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.012     ; 4.999      ;
+; 4.783 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; 0.000      ; 5.089      ;
+; 4.858 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; 0.000      ; 5.164      ;
+; 4.858 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; 0.000      ; 5.164      ;
+; 5.125 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.012     ; 5.419      ;
+; 5.200 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.012     ; 5.494      ;
+; 5.200 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.012     ; 5.494      ;
+; 5.456 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.010     ; 5.752      ;
+; 5.531 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.010     ; 5.827      ;
+; 5.531 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.010     ; 5.827      ;
+; 5.766 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.002     ; 6.070      ;
+; 5.841 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.002     ; 6.145      ;
+; 5.841 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.002     ; 6.145      ;
+; 5.861 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.011     ; 6.156      ;
+; 5.936 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.011     ; 6.231      ;
+; 5.936 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.011     ; 6.231      ;
+; 6.178 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.011     ; 6.473      ;
+; 6.196 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.011     ; 6.491      ;
+; 6.253 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.011     ; 6.548      ;
+; 6.253 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.011     ; 6.548      ;
+; 6.271 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.011     ; 6.566      ;
+; 6.271 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.011     ; 6.566      ;
+; 6.279 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.010     ; 6.575      ;
+; 6.354 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.010     ; 6.650      ;
+; 6.354 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.010     ; 6.650      ;
+; 6.646 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.010     ; 6.942      ;
+; 6.721 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.010     ; 7.017      ;
+; 6.721 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.010     ; 7.017      ;
+; 7.119 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.002     ; 7.423      ;
+; 7.194 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.002     ; 7.498      ;
+; 7.194 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.002     ; 7.498      ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CONST_MULT                   ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CONST_MULT                   ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF           ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF           ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10     ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10     ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11     ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11     ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_3      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_3      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_4      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_4      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_5      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_5      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_6      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_6      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_7      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_7      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_8      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_8      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_9      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_9      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_EN_PPS_COUNTER               ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_EN_PPS_COUNTER               ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_IDLE                         ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_IDLE                         ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_LOAD_CURRENT_PPS             ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_LOAD_CURRENT_PPS             ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_LOAD_PPS_INTERRUPT_IN        ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_LOAD_PPS_INTERRUPT_IN        ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_LOAD_USER_RPM                ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_LOAD_USER_RPM                ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_MULT_PID_CONST               ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_MULT_PID_CONST               ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PID_COMB_LOGIC               ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PID_COMB_LOGIC               ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PID_INT_CONVERSION           ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PID_INT_CONVERSION           ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PPS_CONVERSION               ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PPS_CONVERSION               ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PPS_DIFF                     ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PPS_DIFF                     ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_RESET                        ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_RESET                        ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_SUM_KI_DIFF_KD               ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_SUM_KI_DIFF_KD               ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_SUM_KI_KD                    ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_SUM_KI_KD                    ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_SUM_KP_KI_KD                 ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_SUM_KP_KI_KD                 ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_UPDATE_CURRENT_RPM           ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_UPDATE_CURRENT_RPM           ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_UPDATE_PID                   ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_UPDATE_PID                   ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_CONST_MULT              ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_CONST_MULT              ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_MULT_PID_CONST          ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_MULT_PID_CONST          ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PID_INT_CONVERSION      ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PID_INT_CONVERSION      ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PPS_CONVERSION          ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PPS_CONVERSION          ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PPS_DIFF                ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PPS_DIFF                ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PPS_TRIGGER             ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PPS_TRIGGER             ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_DIFF_KD          ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_DIFF_KD          ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_KD               ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_KD               ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_SUM_KP_KI_KD            ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_SUM_KP_KI_KD            ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_UPDATE_PID              ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_UPDATE_PID              ;
+; 8.758  ; 10.000       ; 1.242          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_USER_RPM_CONVERSION     ;
+; 8.758  ; 10.000       ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_USER_RPM_CONVERSION     ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; clk|combout                                   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clk|combout                                   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; clk~clkctrl|inclk[0]                          ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clk~clkctrl|inclk[0]                          ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; clk~clkctrl|outclk                            ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clk~clkctrl|outclk                            ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CONST_MULT|clk               ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CONST_MULT|clk               ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF|clk       ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF|clk       ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10|clk ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10|clk ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11|clk ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11|clk ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1|clk  ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1|clk  ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2|clk  ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2|clk  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Setup Times                                                                       ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; cmd[*]                ; clock      ; 6.232 ; 6.232 ; Rise       ; clock           ;
+;  cmd[0]               ; clock      ; 6.232 ; 6.232 ; Rise       ; clock           ;
+;  cmd[1]               ; clock      ; 6.173 ; 6.173 ; Rise       ; clock           ;
+; cmd_send              ; clock      ; 6.319 ; 6.319 ; Rise       ; clock           ;
+; delay_counter_trigger ; clock      ; 7.136 ; 7.136 ; Rise       ; clock           ;
+; pps_interrupt_trigger ; clock      ; 6.625 ; 6.625 ; Rise       ; clock           ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Hold Times                                                                          ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; cmd[*]                ; clock      ; -3.837 ; -3.837 ; Rise       ; clock           ;
+;  cmd[0]               ; clock      ; -3.837 ; -3.837 ; Rise       ; clock           ;
+;  cmd[1]               ; clock      ; -4.135 ; -4.135 ; Rise       ; clock           ;
+; cmd_send              ; clock      ; -4.368 ; -4.368 ; Rise       ; clock           ;
+; delay_counter_trigger ; clock      ; -3.452 ; -3.452 ; Rise       ; clock           ;
+; pps_interrupt_trigger ; clock      ; -3.833 ; -3.833 ; Rise       ; clock           ;
++-----------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++---------------------------+------------+--------+--------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------------+------------+--------+--------+------------+-----------------+
+; delay_counter_in[*]       ; clock      ; 14.202 ; 14.202 ; Rise       ; clock           ;
+;  delay_counter_in[0]      ; clock      ; 14.202 ; 14.202 ; Rise       ; clock           ;
+;  delay_counter_in[1]      ; clock      ; 11.324 ; 11.324 ; Rise       ; clock           ;
+;  delay_counter_in[2]      ; clock      ; 11.742 ; 11.742 ; Rise       ; clock           ;
+; en_const_mult             ; clock      ; 9.384  ; 9.384  ; Rise       ; clock           ;
+; en_delay_counter          ; clock      ; 12.823 ; 12.823 ; Rise       ; clock           ;
+; en_diff_current_error     ; clock      ; 13.470 ; 13.470 ; Rise       ; clock           ;
+; en_diff_kd                ; clock      ; 12.679 ; 12.679 ; Rise       ; clock           ;
+; en_mult                   ; clock      ; 11.870 ; 11.870 ; Rise       ; clock           ;
+; en_pid_fpconversion       ; clock      ; 10.758 ; 10.758 ; Rise       ; clock           ;
+; en_pps_conversion         ; clock      ; 10.995 ; 10.995 ; Rise       ; clock           ;
+; en_pps_diff               ; clock      ; 10.592 ; 10.592 ; Rise       ; clock           ;
+; en_pps_interrupt          ; clock      ; 10.708 ; 10.708 ; Rise       ; clock           ;
+; en_pwm_complement         ; clock      ; 9.538  ; 9.538  ; Rise       ; clock           ;
+; en_sum_ki                 ; clock      ; 12.689 ; 12.689 ; Rise       ; clock           ;
+; en_sum_ki_kd              ; clock      ; 12.055 ; 12.055 ; Rise       ; clock           ;
+; en_sum_kp_ki_kd           ; clock      ; 11.713 ; 11.713 ; Rise       ; clock           ;
+; en_user_rpm_conversion    ; clock      ; 9.380  ; 9.380  ; Rise       ; clock           ;
+; load_current_pps          ; clock      ; 8.048  ; 8.048  ; Rise       ; clock           ;
+; load_current_rpm          ; clock      ; 8.473  ; 8.473  ; Rise       ; clock           ;
+; load_kp_mult_reg          ; clock      ; 8.020  ; 8.020  ; Rise       ; clock           ;
+; load_last_error           ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_pid_res              ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_pps_interrupt_in     ; clock      ; 8.015  ; 8.015  ; Rise       ; clock           ;
+; load_prev_pps             ; clock      ; 8.067  ; 8.067  ; Rise       ; clock           ;
+; load_total_error          ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_user_rpm             ; clock      ; 7.720  ; 7.720  ; Rise       ; clock           ;
+; rst_encoder_pulse_counter ; clock      ; 9.283  ; 9.283  ; Rise       ; clock           ;
+; rst_pps_interrupt         ; clock      ; 7.723  ; 7.723  ; Rise       ; clock           ;
+; state_debug[*]            ; clock      ; 13.167 ; 13.167 ; Rise       ; clock           ;
+;  state_debug[0]           ; clock      ; 13.167 ; 13.167 ; Rise       ; clock           ;
+;  state_debug[1]           ; clock      ; 13.155 ; 13.155 ; Rise       ; clock           ;
+;  state_debug[2]           ; clock      ; 12.338 ; 12.338 ; Rise       ; clock           ;
+;  state_debug[3]           ; clock      ; 12.425 ; 12.425 ; Rise       ; clock           ;
+;  state_debug[4]           ; clock      ; 11.388 ; 11.388 ; Rise       ; clock           ;
+;  state_debug[5]           ; clock      ; 11.357 ; 11.357 ; Rise       ; clock           ;
++---------------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++---------------------------+------------+--------+--------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------------+------------+--------+--------+------------+-----------------+
+; delay_counter_in[*]       ; clock      ; 8.957  ; 8.957  ; Rise       ; clock           ;
+;  delay_counter_in[0]      ; clock      ; 10.126 ; 10.126 ; Rise       ; clock           ;
+;  delay_counter_in[1]      ; clock      ; 9.056  ; 9.056  ; Rise       ; clock           ;
+;  delay_counter_in[2]      ; clock      ; 8.957  ; 8.957  ; Rise       ; clock           ;
+; en_const_mult             ; clock      ; 8.245  ; 8.245  ; Rise       ; clock           ;
+; en_delay_counter          ; clock      ; 8.959  ; 8.959  ; Rise       ; clock           ;
+; en_diff_current_error     ; clock      ; 9.397  ; 9.397  ; Rise       ; clock           ;
+; en_diff_kd                ; clock      ; 9.297  ; 9.297  ; Rise       ; clock           ;
+; en_mult                   ; clock      ; 8.943  ; 8.943  ; Rise       ; clock           ;
+; en_pid_fpconversion       ; clock      ; 8.002  ; 8.002  ; Rise       ; clock           ;
+; en_pps_conversion         ; clock      ; 8.739  ; 8.739  ; Rise       ; clock           ;
+; en_pps_diff               ; clock      ; 8.235  ; 8.235  ; Rise       ; clock           ;
+; en_pps_interrupt          ; clock      ; 8.950  ; 8.950  ; Rise       ; clock           ;
+; en_pwm_complement         ; clock      ; 8.939  ; 8.939  ; Rise       ; clock           ;
+; en_sum_ki                 ; clock      ; 9.307  ; 9.307  ; Rise       ; clock           ;
+; en_sum_ki_kd              ; clock      ; 9.299  ; 9.299  ; Rise       ; clock           ;
+; en_sum_kp_ki_kd           ; clock      ; 8.957  ; 8.957  ; Rise       ; clock           ;
+; en_user_rpm_conversion    ; clock      ; 8.608  ; 8.608  ; Rise       ; clock           ;
+; load_current_pps          ; clock      ; 8.048  ; 8.048  ; Rise       ; clock           ;
+; load_current_rpm          ; clock      ; 8.473  ; 8.473  ; Rise       ; clock           ;
+; load_kp_mult_reg          ; clock      ; 8.020  ; 8.020  ; Rise       ; clock           ;
+; load_last_error           ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_pid_res              ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_pps_interrupt_in     ; clock      ; 8.015  ; 8.015  ; Rise       ; clock           ;
+; load_prev_pps             ; clock      ; 8.067  ; 8.067  ; Rise       ; clock           ;
+; load_total_error          ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_user_rpm             ; clock      ; 7.720  ; 7.720  ; Rise       ; clock           ;
+; rst_encoder_pulse_counter ; clock      ; 8.668  ; 8.668  ; Rise       ; clock           ;
+; rst_pps_interrupt         ; clock      ; 7.723  ; 7.723  ; Rise       ; clock           ;
+; state_debug[*]            ; clock      ; 8.242  ; 8.242  ; Rise       ; clock           ;
+;  state_debug[0]           ; clock      ; 10.408 ; 10.408 ; Rise       ; clock           ;
+;  state_debug[1]           ; clock      ; 9.750  ; 9.750  ; Rise       ; clock           ;
+;  state_debug[2]           ; clock      ; 9.595  ; 9.595  ; Rise       ; clock           ;
+;  state_debug[3]           ; clock      ; 9.633  ; 9.633  ; Rise       ; clock           ;
+;  state_debug[4]           ; clock      ; 8.242  ; 8.242  ; Rise       ; clock           ;
+;  state_debug[5]           ; clock      ; 8.601  ; 8.601  ; Rise       ; clock           ;
++---------------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Propagation Delay                                                                ;
++----------------------+-------------------------------+--------+----+----+--------+
+; Input Port           ; Output Port                   ; RR     ; RF ; FR ; FF     ;
++----------------------+-------------------------------+--------+----+----+--------+
+; const_mult_nan       ; operational_error_encoder[6]  ; 9.225  ;    ;    ; 9.225  ;
+; const_mult_ovf       ; operational_error_encoder[4]  ; 9.544  ;    ;    ; 9.544  ;
+; const_mult_udf       ; operational_error_encoder[5]  ; 10.411 ;    ;    ; 10.411 ;
+; const_mult_zero      ; operational_error_encoder[7]  ; 9.550  ;    ;    ; 9.550  ;
+; current_error_nan    ; operational_error_encoder[18] ; 10.517 ;    ;    ; 10.517 ;
+; current_error_ovf    ; operational_error_encoder[16] ; 10.407 ;    ;    ; 10.407 ;
+; current_error_udf    ; operational_error_encoder[17] ; 10.455 ;    ;    ; 10.455 ;
+; current_error_zero   ; operational_error_encoder[19] ; 10.467 ;    ;    ; 10.467 ;
+; kd_diff_nan          ; operational_error_pid[2]      ; 9.534  ;    ;    ; 9.534  ;
+; kd_diff_ovf          ; operational_error_pid[0]      ; 10.424 ;    ;    ; 10.424 ;
+; kd_diff_udf          ; operational_error_pid[1]      ; 10.453 ;    ;    ; 10.453 ;
+; kd_diff_zero         ; operational_error_pid[3]      ; 9.195  ;    ;    ; 9.195  ;
+; kd_mult_nan          ; operational_error_pid[14]     ; 10.428 ;    ;    ; 10.428 ;
+; kd_mult_ovf          ; operational_error_pid[12]     ; 10.107 ;    ;    ; 10.107 ;
+; kd_mult_udf          ; operational_error_pid[13]     ; 9.163  ;    ;    ; 9.163  ;
+; kd_mult_zero         ; operational_error_pid[15]     ; 9.213  ;    ;    ; 9.213  ;
+; ki_kd_sum_nan        ; operational_error_pid[18]     ; 10.451 ;    ;    ; 10.451 ;
+; ki_kd_sum_ovf        ; operational_error_pid[16]     ; 10.509 ;    ;    ; 10.509 ;
+; ki_kd_sum_udf        ; operational_error_pid[17]     ; 10.011 ;    ;    ; 10.011 ;
+; ki_kd_sum_zero       ; operational_error_pid[19]     ; 10.473 ;    ;    ; 10.473 ;
+; ki_mult_nan          ; operational_error_pid[10]     ; 10.408 ;    ;    ; 10.408 ;
+; ki_mult_ovf          ; operational_error_pid[8]      ; 10.510 ;    ;    ; 10.510 ;
+; ki_mult_udf          ; operational_error_pid[9]      ; 10.578 ;    ;    ; 10.578 ;
+; ki_mult_zero         ; operational_error_pid[11]     ; 9.195  ;    ;    ; 9.195  ;
+; ki_sum_nan           ; operational_error_pid[6]      ; 9.203  ;    ;    ; 9.203  ;
+; ki_sum_ovf           ; operational_error_pid[4]      ; 9.223  ;    ;    ; 9.223  ;
+; ki_sum_udf           ; operational_error_pid[5]      ; 9.285  ;    ;    ; 9.285  ;
+; ki_sum_zero          ; operational_error_pid[7]      ; 9.225  ;    ;    ; 9.225  ;
+; kp_ki_kd_sum_nan     ; operational_error_pid[22]     ; 9.142  ;    ;    ; 9.142  ;
+; kp_ki_kd_sum_ovf     ; operational_error_pid[20]     ; 9.235  ;    ;    ; 9.235  ;
+; kp_ki_kd_sum_udf     ; operational_error_pid[21]     ; 9.275  ;    ;    ; 9.275  ;
+; kp_ki_kd_sum_zero    ; operational_error_pid[23]     ; 9.172  ;    ;    ; 9.172  ;
+; kp_mult_nan          ; operational_error_encoder[22] ; 10.517 ;    ;    ; 10.517 ;
+; kp_mult_ovf          ; operational_error_encoder[20] ; 10.489 ;    ;    ; 10.489 ;
+; kp_mult_udf          ; operational_error_encoder[21] ; 10.435 ;    ;    ; 10.435 ;
+; kp_mult_zero         ; operational_error_encoder[23] ; 10.506 ;    ;    ; 10.506 ;
+; pid_fpconversion_nan ; operational_error_pid[26]     ; 10.474 ;    ;    ; 10.474 ;
+; pid_fpconversion_neg ; operational_error_pid[27]     ; 10.077 ;    ;    ; 10.077 ;
+; pid_fpconversion_ovf ; operational_error_pid[24]     ; 9.205  ;    ;    ; 9.205  ;
+; pid_fpconversion_udf ; operational_error_pid[25]     ; 9.523  ;    ;    ; 9.523  ;
+; pps_diff_nan         ; operational_error_encoder[2]  ; 9.534  ;    ;    ; 9.534  ;
+; pps_diff_ovf         ; operational_error_encoder[0]  ; 10.494 ;    ;    ; 10.494 ;
+; pps_diff_udf         ; operational_error_encoder[1]  ; 9.255  ;    ;    ; 9.255  ;
+; pps_diff_zero        ; operational_error_encoder[3]  ; 9.152  ;    ;    ; 9.152  ;
+; pwm_complement_ovf   ; operational_error_pid[31]     ; 9.235  ;    ;    ; 9.235  ;
++----------------------+-------------------------------+--------+----+----+--------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Propagation Delay                                                        ;
++----------------------+-------------------------------+--------+----+----+--------+
+; Input Port           ; Output Port                   ; RR     ; RF ; FR ; FF     ;
++----------------------+-------------------------------+--------+----+----+--------+
+; const_mult_nan       ; operational_error_encoder[6]  ; 9.225  ;    ;    ; 9.225  ;
+; const_mult_ovf       ; operational_error_encoder[4]  ; 9.544  ;    ;    ; 9.544  ;
+; const_mult_udf       ; operational_error_encoder[5]  ; 10.411 ;    ;    ; 10.411 ;
+; const_mult_zero      ; operational_error_encoder[7]  ; 9.550  ;    ;    ; 9.550  ;
+; current_error_nan    ; operational_error_encoder[18] ; 10.517 ;    ;    ; 10.517 ;
+; current_error_ovf    ; operational_error_encoder[16] ; 10.407 ;    ;    ; 10.407 ;
+; current_error_udf    ; operational_error_encoder[17] ; 10.455 ;    ;    ; 10.455 ;
+; current_error_zero   ; operational_error_encoder[19] ; 10.467 ;    ;    ; 10.467 ;
+; kd_diff_nan          ; operational_error_pid[2]      ; 9.534  ;    ;    ; 9.534  ;
+; kd_diff_ovf          ; operational_error_pid[0]      ; 10.424 ;    ;    ; 10.424 ;
+; kd_diff_udf          ; operational_error_pid[1]      ; 10.453 ;    ;    ; 10.453 ;
+; kd_diff_zero         ; operational_error_pid[3]      ; 9.195  ;    ;    ; 9.195  ;
+; kd_mult_nan          ; operational_error_pid[14]     ; 10.428 ;    ;    ; 10.428 ;
+; kd_mult_ovf          ; operational_error_pid[12]     ; 10.107 ;    ;    ; 10.107 ;
+; kd_mult_udf          ; operational_error_pid[13]     ; 9.163  ;    ;    ; 9.163  ;
+; kd_mult_zero         ; operational_error_pid[15]     ; 9.213  ;    ;    ; 9.213  ;
+; ki_kd_sum_nan        ; operational_error_pid[18]     ; 10.451 ;    ;    ; 10.451 ;
+; ki_kd_sum_ovf        ; operational_error_pid[16]     ; 10.509 ;    ;    ; 10.509 ;
+; ki_kd_sum_udf        ; operational_error_pid[17]     ; 10.011 ;    ;    ; 10.011 ;
+; ki_kd_sum_zero       ; operational_error_pid[19]     ; 10.473 ;    ;    ; 10.473 ;
+; ki_mult_nan          ; operational_error_pid[10]     ; 10.408 ;    ;    ; 10.408 ;
+; ki_mult_ovf          ; operational_error_pid[8]      ; 10.510 ;    ;    ; 10.510 ;
+; ki_mult_udf          ; operational_error_pid[9]      ; 10.578 ;    ;    ; 10.578 ;
+; ki_mult_zero         ; operational_error_pid[11]     ; 9.195  ;    ;    ; 9.195  ;
+; ki_sum_nan           ; operational_error_pid[6]      ; 9.203  ;    ;    ; 9.203  ;
+; ki_sum_ovf           ; operational_error_pid[4]      ; 9.223  ;    ;    ; 9.223  ;
+; ki_sum_udf           ; operational_error_pid[5]      ; 9.285  ;    ;    ; 9.285  ;
+; ki_sum_zero          ; operational_error_pid[7]      ; 9.225  ;    ;    ; 9.225  ;
+; kp_ki_kd_sum_nan     ; operational_error_pid[22]     ; 9.142  ;    ;    ; 9.142  ;
+; kp_ki_kd_sum_ovf     ; operational_error_pid[20]     ; 9.235  ;    ;    ; 9.235  ;
+; kp_ki_kd_sum_udf     ; operational_error_pid[21]     ; 9.275  ;    ;    ; 9.275  ;
+; kp_ki_kd_sum_zero    ; operational_error_pid[23]     ; 9.172  ;    ;    ; 9.172  ;
+; kp_mult_nan          ; operational_error_encoder[22] ; 10.517 ;    ;    ; 10.517 ;
+; kp_mult_ovf          ; operational_error_encoder[20] ; 10.489 ;    ;    ; 10.489 ;
+; kp_mult_udf          ; operational_error_encoder[21] ; 10.435 ;    ;    ; 10.435 ;
+; kp_mult_zero         ; operational_error_encoder[23] ; 10.506 ;    ;    ; 10.506 ;
+; pid_fpconversion_nan ; operational_error_pid[26]     ; 10.474 ;    ;    ; 10.474 ;
+; pid_fpconversion_neg ; operational_error_pid[27]     ; 10.077 ;    ;    ; 10.077 ;
+; pid_fpconversion_ovf ; operational_error_pid[24]     ; 9.205  ;    ;    ; 9.205  ;
+; pid_fpconversion_udf ; operational_error_pid[25]     ; 9.523  ;    ;    ; 9.523  ;
+; pps_diff_nan         ; operational_error_encoder[2]  ; 9.534  ;    ;    ; 9.534  ;
+; pps_diff_ovf         ; operational_error_encoder[0]  ; 10.494 ;    ;    ; 10.494 ;
+; pps_diff_udf         ; operational_error_encoder[1]  ; 9.255  ;    ;    ; 9.255  ;
+; pps_diff_zero        ; operational_error_encoder[3]  ; 9.152  ;    ;    ; 9.152  ;
+; pwm_complement_ovf   ; operational_error_pid[31]     ; 9.235  ;    ;    ; 9.235  ;
++----------------------+-------------------------------+--------+----+----+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; 17.753 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.203 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clock ; 9.000 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                            ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 17.753 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.002     ; 2.275      ;
+; 17.753 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.002     ; 2.275      ;
+; 17.845 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.010     ; 2.175      ;
+; 17.845 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.010     ; 2.175      ;
+; 17.897 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.002     ; 2.131      ;
+; 17.949 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.012     ; 2.069      ;
+; 17.949 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.012     ; 2.069      ;
+; 17.958 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.012     ; 2.060      ;
+; 17.958 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.012     ; 2.060      ;
+; 17.980 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.010     ; 2.040      ;
+; 17.980 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.010     ; 2.040      ;
+; 17.989 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.010     ; 2.031      ;
+; 18.065 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.012     ; 1.953      ;
+; 18.065 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.012     ; 1.953      ;
+; 18.093 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.012     ; 1.925      ;
+; 18.102 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.002     ; 1.926      ;
+; 18.102 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.002     ; 1.926      ;
+; 18.102 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.012     ; 1.916      ;
+; 18.124 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.010     ; 1.896      ;
+; 18.203 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.011     ; 1.816      ;
+; 18.203 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.011     ; 1.816      ;
+; 18.209 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.012     ; 1.809      ;
+; 18.246 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.002     ; 1.782      ;
+; 18.295 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.013     ; 1.722      ;
+; 18.295 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.013     ; 1.722      ;
+; 18.347 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.011     ; 1.672      ;
+; 18.366 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; 0.000      ; 1.664      ;
+; 18.366 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; 0.000      ; 1.664      ;
+; 18.425 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.013     ; 1.592      ;
+; 18.425 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.013     ; 1.592      ;
+; 18.439 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.013     ; 1.578      ;
+; 18.510 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; 0.000      ; 1.520      ;
+; 18.569 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.013     ; 1.448      ;
+; 18.700 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; -0.011     ; 1.319      ;
+; 18.700 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; -0.011     ; 1.319      ;
+; 18.844 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; -0.011     ; 1.175      ;
+; 19.023 ; current_state.ST_PID_COMB_LOGIC           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 20.000       ; 0.011      ; 1.018      ;
+; 19.027 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 20.000       ; 0.000      ; 1.003      ;
+; 19.027 ; current_state.ST_IDLE                     ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 20.000       ; 0.000      ; 1.003      ;
+; 19.032 ; current_state.ST_UPDATE_CURRENT_RPM       ; current_state.ST_CURRENT_ERROR_DIFF       ; clock        ; clock       ; 20.000       ; 0.000      ; 0.998      ;
+; 19.171 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; 0.000      ; 0.859      ;
+; 19.262 ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; current_state.ST_UPDATE_PID               ; clock        ; clock       ; 20.000       ; -0.011     ; 0.757      ;
+; 19.333 ; current_state.ST_MULT_PID_CONST           ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 20.000       ; -0.002     ; 0.695      ;
+; 19.347 ; current_state.ST_IDLE                     ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; 0.000      ; 0.683      ;
+; 19.352 ; current_state.ST_PPS_CONVERSION           ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 20.000       ; 0.010      ; 0.688      ;
+; 19.352 ; current_state.ST_LOAD_CURRENT_PPS         ; current_state.ST_PPS_CONVERSION           ; clock        ; clock       ; 20.000       ; -0.011     ; 0.667      ;
+; 19.362 ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; current_state.ST_SUM_KI_DIFF_KD           ; clock        ; clock       ; 20.000       ; 0.000      ; 0.668      ;
+; 19.363 ; current_state.ST_SUM_KP_KI_KD             ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 20.000       ; 0.001      ; 0.668      ;
+; 19.370 ; current_state.ST_PID_INT_CONVERSION       ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.660      ;
+; 19.380 ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; current_state.ST_EN_PPS_COUNTER           ; clock        ; clock       ; 20.000       ; 0.011      ; 0.661      ;
+; 19.384 ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; current_state.ST_SUM_KI_KD                ; clock        ; clock       ; 20.000       ; 0.002      ; 0.648      ;
+; 19.438 ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; current_state.ST_PPS_DIFF                 ; clock        ; clock       ; 20.000       ; -0.008     ; 0.584      ;
+; 19.445 ; current_state.ST_SUM_KI_KD                ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 20.000       ; 0.000      ; 0.585      ;
+; 19.447 ; current_state.ST_CONST_MULT               ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 20.000       ; 0.009      ; 0.592      ;
+; 19.458 ; current_state.ST_CURRENT_ERROR_DIFF       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 20.000       ; 0.001      ; 0.573      ;
+; 19.460 ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; current_state.ST_PID_INT_CONVERSION       ; clock        ; clock       ; 20.000       ; 0.000      ; 0.570      ;
+; 19.490 ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; current_state.ST_CONST_MULT               ; clock        ; clock       ; 20.000       ; 0.000      ; 0.540      ;
+; 19.493 ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; current_state.ST_PID_COMB_LOGIC           ; clock        ; clock       ; 20.000       ; -0.002     ; 0.535      ;
+; 19.508 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.522      ;
+; 19.515 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.515      ;
+; 19.516 ; current_state.ST_LOAD_USER_RPM            ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; 0.000      ; 0.514      ;
+; 19.516 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; 0.000      ; 0.514      ;
+; 19.517 ; current_state.ST_RESET                    ; current_state.ST_IDLE                     ; clock        ; clock       ; 20.000       ; -0.012     ; 0.501      ;
+; 19.520 ; current_state.ST_SUM_KI_DIFF_KD           ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 20.000       ; 0.000      ; 0.510      ;
+; 19.526 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.504      ;
+; 19.529 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.501      ;
+; 19.531 ; current_state.ST_EN_PPS_COUNTER           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 20.000       ; 0.000      ; 0.499      ;
+; 19.554 ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; current_state.ST_UPDATE_CURRENT_RPM       ; clock        ; clock       ; 20.000       ; 0.000      ; 0.476      ;
+; 19.563 ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; current_state.ST_MULT_PID_CONST           ; clock        ; clock       ; 20.000       ; 0.000      ; 0.467      ;
+; 19.566 ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; current_state.ST_SUM_KP_KI_KD             ; clock        ; clock       ; 20.000       ; 0.000      ; 0.464      ;
+; 19.571 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_CURRENT_PPS         ; clock        ; clock       ; 20.000       ; 0.000      ; 0.459      ;
+; 19.572 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; clock        ; clock       ; 20.000       ; 0.000      ; 0.458      ;
+; 19.637 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.393      ;
+; 19.639 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.391      ;
+; 19.643 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.387      ;
+; 19.645 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.385      ;
+; 19.645 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; clock        ; clock       ; 20.000       ; 0.000      ; 0.385      ;
+; 19.649 ; current_state.ST_PPS_DIFF                 ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 20.000       ; 0.000      ; 0.381      ;
+; 19.651 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.379      ;
+; 19.655 ; current_state.ST_UPDATE_PID               ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 20.000       ; 0.000      ; 0.375      ;
+; 19.679 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
+; 19.679 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 20.000       ; 0.000      ; 0.351      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                            ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.203 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.351      ;
+; 0.227 ; current_state.ST_UPDATE_PID               ; current_state.ST_WAIT_UPDATE_PID          ; clock        ; clock       ; 0.000        ; 0.000      ; 0.375      ;
+; 0.231 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.379      ;
+; 0.233 ; current_state.ST_PPS_DIFF                 ; current_state.ST_WAIT_PPS_DIFF            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.381      ;
+; 0.237 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.385      ;
+; 0.237 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.385      ;
+; 0.239 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.387      ;
+; 0.243 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.391      ;
+; 0.245 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.393      ;
+; 0.264 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.412      ;
+; 0.264 ; current_state.ST_IDLE                     ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; 0.000      ; 0.412      ;
+; 0.310 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.458      ;
+; 0.311 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_CURRENT_PPS         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.459      ;
+; 0.316 ; current_state.ST_DISABLE_DELAY_COUNTER_8  ; current_state.ST_SUM_KP_KI_KD             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.464      ;
+; 0.319 ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; current_state.ST_MULT_PID_CONST           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.467      ;
+; 0.328 ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; current_state.ST_UPDATE_CURRENT_RPM       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.476      ;
+; 0.351 ; current_state.ST_EN_PPS_COUNTER           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.499      ;
+; 0.353 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_DISABLE_DELAY_COUNTER_6  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.501      ;
+; 0.356 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.504      ;
+; 0.362 ; current_state.ST_SUM_KI_DIFF_KD           ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.365 ; current_state.ST_RESET                    ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; -0.012     ; 0.501      ;
+; 0.366 ; current_state.ST_LOAD_USER_RPM            ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.514      ;
+; 0.366 ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.514      ;
+; 0.367 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.374 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_DISABLE_DELAY_COUNTER_4  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.522      ;
+; 0.389 ; current_state.ST_DISABLE_DELAY_COUNTER_11 ; current_state.ST_PID_COMB_LOGIC           ; clock        ; clock       ; 0.000        ; -0.002     ; 0.535      ;
+; 0.392 ; current_state.ST_DISABLE_DELAY_COUNTER_3  ; current_state.ST_CONST_MULT               ; clock        ; clock       ; 0.000        ; 0.000      ; 0.540      ;
+; 0.422 ; current_state.ST_DISABLE_DELAY_COUNTER_9  ; current_state.ST_PID_INT_CONVERSION       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.570      ;
+; 0.424 ; current_state.ST_CURRENT_ERROR_DIFF       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; clock        ; clock       ; 0.000        ; 0.001      ; 0.573      ;
+; 0.435 ; current_state.ST_CONST_MULT               ; current_state.ST_WAIT_CONST_MULT          ; clock        ; clock       ; 0.000        ; 0.009      ; 0.592      ;
+; 0.437 ; current_state.ST_SUM_KI_KD                ; current_state.ST_WAIT_SUM_KI_KD           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.585      ;
+; 0.444 ; current_state.ST_DISABLE_DELAY_COUNTER_2  ; current_state.ST_PPS_DIFF                 ; clock        ; clock       ; 0.000        ; -0.008     ; 0.584      ;
+; 0.498 ; current_state.ST_DISABLE_DELAY_COUNTER_7  ; current_state.ST_SUM_KI_KD                ; clock        ; clock       ; 0.000        ; 0.002      ; 0.648      ;
+; 0.502 ; current_state.ST_DISABLE_DELAY_COUNTER_1  ; current_state.ST_EN_PPS_COUNTER           ; clock        ; clock       ; 0.000        ; 0.011      ; 0.661      ;
+; 0.512 ; current_state.ST_PID_INT_CONVERSION       ; current_state.ST_WAIT_PID_INT_CONVERSION  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.660      ;
+; 0.519 ; current_state.ST_SUM_KP_KI_KD             ; current_state.ST_WAIT_SUM_KP_KI_KD        ; clock        ; clock       ; 0.000        ; 0.001      ; 0.668      ;
+; 0.520 ; current_state.ST_DISABLE_DELAY_COUNTER_5  ; current_state.ST_SUM_KI_DIFF_KD           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.668      ;
+; 0.530 ; current_state.ST_LOAD_CURRENT_PPS         ; current_state.ST_PPS_CONVERSION           ; clock        ; clock       ; 0.000        ; -0.011     ; 0.667      ;
+; 0.530 ; current_state.ST_PPS_CONVERSION           ; current_state.ST_WAIT_PPS_CONVERSION      ; clock        ; clock       ; 0.000        ; 0.010      ; 0.688      ;
+; 0.535 ; current_state.ST_IDLE                     ; current_state.ST_IDLE                     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.549 ; current_state.ST_MULT_PID_CONST           ; current_state.ST_WAIT_MULT_PID_CONST      ; clock        ; clock       ; 0.000        ; -0.002     ; 0.695      ;
+; 0.560 ; current_state.ST_IDLE                     ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.708      ;
+; 0.620 ; current_state.ST_DISABLE_DELAY_COUNTER_10 ; current_state.ST_UPDATE_PID               ; clock        ; clock       ; 0.000        ; -0.011     ; 0.757      ;
+; 0.850 ; current_state.ST_UPDATE_CURRENT_RPM       ; current_state.ST_CURRENT_ERROR_DIFF       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.998      ;
+; 0.859 ; current_state.ST_PID_COMB_LOGIC           ; current_state.ST_WAIT_PPS_TRIGGER         ; clock        ; clock       ; 0.000        ; 0.011      ; 1.018      ;
+; 1.038 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.011     ; 1.175      ;
+; 1.182 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.011     ; 1.319      ;
+; 1.182 ; current_state.ST_WAIT_PPS_TRIGGER         ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.011     ; 1.319      ;
+; 1.313 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.013     ; 1.448      ;
+; 1.372 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.520      ;
+; 1.443 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.013     ; 1.578      ;
+; 1.457 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.013     ; 1.592      ;
+; 1.457 ; current_state.ST_WAIT_PID_INT_CONVERSION  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.013     ; 1.592      ;
+; 1.516 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.664      ;
+; 1.516 ; current_state.ST_WAIT_USER_RPM_CONVERSION ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; 0.000      ; 1.664      ;
+; 1.535 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.011     ; 1.672      ;
+; 1.587 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.013     ; 1.722      ;
+; 1.587 ; current_state.ST_WAIT_SUM_KP_KI_KD        ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.013     ; 1.722      ;
+; 1.636 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.782      ;
+; 1.673 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.012     ; 1.809      ;
+; 1.679 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.011     ; 1.816      ;
+; 1.679 ; current_state.ST_WAIT_CONST_MULT          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.011     ; 1.816      ;
+; 1.758 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.010     ; 1.896      ;
+; 1.780 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.012     ; 1.916      ;
+; 1.780 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.002     ; 1.926      ;
+; 1.780 ; current_state.ST_WAIT_PPS_DIFF            ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.002     ; 1.926      ;
+; 1.789 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.012     ; 1.925      ;
+; 1.817 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.012     ; 1.953      ;
+; 1.817 ; current_state.ST_WAIT_SUM_KI_KD           ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.012     ; 1.953      ;
+; 1.893 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.010     ; 2.031      ;
+; 1.902 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.010     ; 2.040      ;
+; 1.902 ; current_state.ST_WAIT_MULT_PID_CONST      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.010     ; 2.040      ;
+; 1.924 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.012     ; 2.060      ;
+; 1.924 ; current_state.ST_WAIT_SUM_KI_DIFF_KD      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.012     ; 2.060      ;
+; 1.933 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.012     ; 2.069      ;
+; 1.933 ; current_state.ST_WAIT_CURRENT_ERROR_DIFF  ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.012     ; 2.069      ;
+; 1.985 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_PPS_INTERRUPT_IN    ; clock        ; clock       ; 0.000        ; -0.002     ; 2.131      ;
+; 2.037 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.010     ; 2.175      ;
+; 2.037 ; current_state.ST_WAIT_PPS_CONVERSION      ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.010     ; 2.175      ;
+; 2.129 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_LOAD_USER_RPM            ; clock        ; clock       ; 0.000        ; -0.002     ; 2.275      ;
+; 2.129 ; current_state.ST_WAIT_UPDATE_PID          ; current_state.ST_WAIT_USER_RPM_CONVERSION ; clock        ; clock       ; 0.000        ; -0.002     ; 2.275      ;
++-------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CONST_MULT                   ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CONST_MULT                   ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF           ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF           ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10     ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10     ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11     ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11     ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_3      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_3      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_4      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_4      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_5      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_5      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_6      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_6      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_7      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_7      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_8      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_8      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_9      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_9      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_EN_PPS_COUNTER               ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_EN_PPS_COUNTER               ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_IDLE                         ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_IDLE                         ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_LOAD_CURRENT_PPS             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_LOAD_CURRENT_PPS             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_LOAD_PPS_INTERRUPT_IN        ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_LOAD_PPS_INTERRUPT_IN        ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_LOAD_USER_RPM                ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_LOAD_USER_RPM                ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_MULT_PID_CONST               ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_MULT_PID_CONST               ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PID_COMB_LOGIC               ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PID_COMB_LOGIC               ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PID_INT_CONVERSION           ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PID_INT_CONVERSION           ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PPS_CONVERSION               ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PPS_CONVERSION               ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_PPS_DIFF                     ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_PPS_DIFF                     ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_RESET                        ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_RESET                        ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_SUM_KI_DIFF_KD               ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_SUM_KI_DIFF_KD               ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_SUM_KI_KD                    ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_SUM_KI_KD                    ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_SUM_KP_KI_KD                 ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_SUM_KP_KI_KD                 ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_UPDATE_CURRENT_RPM           ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_UPDATE_CURRENT_RPM           ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_UPDATE_PID                   ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_UPDATE_PID                   ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_CONST_MULT              ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_CONST_MULT              ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_CURRENT_ERROR_DIFF      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_MULT_PID_CONST          ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_MULT_PID_CONST          ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PID_INT_CONVERSION      ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PID_INT_CONVERSION      ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PPS_CONVERSION          ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PPS_CONVERSION          ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PPS_DIFF                ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PPS_DIFF                ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_PPS_TRIGGER             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_PPS_TRIGGER             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_DIFF_KD          ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_DIFF_KD          ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_KD               ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_SUM_KI_KD               ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_SUM_KP_KI_KD            ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_SUM_KP_KI_KD            ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_UPDATE_PID              ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_UPDATE_PID              ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_WAIT_USER_RPM_CONVERSION     ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_WAIT_USER_RPM_CONVERSION     ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; clk|combout                                   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clk|combout                                   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; clk~clkctrl|inclk[0]                          ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clk~clkctrl|inclk[0]                          ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; clk~clkctrl|outclk                            ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clk~clkctrl|outclk                            ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CONST_MULT|clk               ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CONST_MULT|clk               ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF|clk       ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_CURRENT_ERROR_DIFF|clk       ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10|clk ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_10|clk ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11|clk ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_11|clk ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1|clk  ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_1|clk  ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2|clk  ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; current_state.ST_DISABLE_DELAY_COUNTER_2|clk  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Setup Times                                                                       ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; cmd[*]                ; clock      ; 2.467 ; 2.467 ; Rise       ; clock           ;
+;  cmd[0]               ; clock      ; 2.467 ; 2.467 ; Rise       ; clock           ;
+;  cmd[1]               ; clock      ; 2.455 ; 2.455 ; Rise       ; clock           ;
+; cmd_send              ; clock      ; 2.510 ; 2.510 ; Rise       ; clock           ;
+; delay_counter_trigger ; clock      ; 2.716 ; 2.716 ; Rise       ; clock           ;
+; pps_interrupt_trigger ; clock      ; 2.579 ; 2.579 ; Rise       ; clock           ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Hold Times                                                                          ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; cmd[*]                ; clock      ; -1.632 ; -1.632 ; Rise       ; clock           ;
+;  cmd[0]               ; clock      ; -1.632 ; -1.632 ; Rise       ; clock           ;
+;  cmd[1]               ; clock      ; -1.739 ; -1.739 ; Rise       ; clock           ;
+; cmd_send              ; clock      ; -1.799 ; -1.799 ; Rise       ; clock           ;
+; delay_counter_trigger ; clock      ; -1.515 ; -1.515 ; Rise       ; clock           ;
+; pps_interrupt_trigger ; clock      ; -1.629 ; -1.629 ; Rise       ; clock           ;
++-----------------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                 ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; delay_counter_in[*]       ; clock      ; 5.322 ; 5.322 ; Rise       ; clock           ;
+;  delay_counter_in[0]      ; clock      ; 5.322 ; 5.322 ; Rise       ; clock           ;
+;  delay_counter_in[1]      ; clock      ; 4.505 ; 4.505 ; Rise       ; clock           ;
+;  delay_counter_in[2]      ; clock      ; 4.628 ; 4.628 ; Rise       ; clock           ;
+; en_const_mult             ; clock      ; 3.960 ; 3.960 ; Rise       ; clock           ;
+; en_delay_counter          ; clock      ; 4.941 ; 4.941 ; Rise       ; clock           ;
+; en_diff_current_error     ; clock      ; 5.106 ; 5.106 ; Rise       ; clock           ;
+; en_diff_kd                ; clock      ; 4.874 ; 4.874 ; Rise       ; clock           ;
+; en_mult                   ; clock      ; 4.691 ; 4.691 ; Rise       ; clock           ;
+; en_pid_fpconversion       ; clock      ; 4.412 ; 4.412 ; Rise       ; clock           ;
+; en_pps_conversion         ; clock      ; 4.409 ; 4.409 ; Rise       ; clock           ;
+; en_pps_diff               ; clock      ; 4.297 ; 4.297 ; Rise       ; clock           ;
+; en_pps_interrupt          ; clock      ; 4.317 ; 4.317 ; Rise       ; clock           ;
+; en_pwm_complement         ; clock      ; 4.063 ; 4.063 ; Rise       ; clock           ;
+; en_sum_ki                 ; clock      ; 4.884 ; 4.884 ; Rise       ; clock           ;
+; en_sum_ki_kd              ; clock      ; 4.796 ; 4.796 ; Rise       ; clock           ;
+; en_sum_kp_ki_kd           ; clock      ; 4.705 ; 4.705 ; Rise       ; clock           ;
+; en_user_rpm_conversion    ; clock      ; 3.960 ; 3.960 ; Rise       ; clock           ;
+; load_current_pps          ; clock      ; 3.587 ; 3.587 ; Rise       ; clock           ;
+; load_current_rpm          ; clock      ; 3.710 ; 3.710 ; Rise       ; clock           ;
+; load_kp_mult_reg          ; clock      ; 3.580 ; 3.580 ; Rise       ; clock           ;
+; load_last_error           ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_pid_res              ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_pps_interrupt_in     ; clock      ; 3.557 ; 3.557 ; Rise       ; clock           ;
+; load_prev_pps             ; clock      ; 3.602 ; 3.602 ; Rise       ; clock           ;
+; load_total_error          ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_user_rpm             ; clock      ; 3.491 ; 3.491 ; Rise       ; clock           ;
+; rst_encoder_pulse_counter ; clock      ; 3.942 ; 3.942 ; Rise       ; clock           ;
+; rst_pps_interrupt         ; clock      ; 3.502 ; 3.502 ; Rise       ; clock           ;
+; state_debug[*]            ; clock      ; 5.047 ; 5.047 ; Rise       ; clock           ;
+;  state_debug[0]           ; clock      ; 5.047 ; 5.047 ; Rise       ; clock           ;
+;  state_debug[1]           ; clock      ; 5.034 ; 5.034 ; Rise       ; clock           ;
+;  state_debug[2]           ; clock      ; 4.789 ; 4.789 ; Rise       ; clock           ;
+;  state_debug[3]           ; clock      ; 4.819 ; 4.819 ; Rise       ; clock           ;
+;  state_debug[4]           ; clock      ; 4.537 ; 4.537 ; Rise       ; clock           ;
+;  state_debug[5]           ; clock      ; 4.602 ; 4.602 ; Rise       ; clock           ;
++---------------------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                         ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; delay_counter_in[*]       ; clock      ; 3.839 ; 3.839 ; Rise       ; clock           ;
+;  delay_counter_in[0]      ; clock      ; 4.180 ; 4.180 ; Rise       ; clock           ;
+;  delay_counter_in[1]      ; clock      ; 3.839 ; 3.839 ; Rise       ; clock           ;
+;  delay_counter_in[2]      ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+; en_const_mult             ; clock      ; 3.643 ; 3.643 ; Rise       ; clock           ;
+; en_delay_counter          ; clock      ; 3.841 ; 3.841 ; Rise       ; clock           ;
+; en_diff_current_error     ; clock      ; 3.965 ; 3.965 ; Rise       ; clock           ;
+; en_diff_kd                ; clock      ; 4.000 ; 4.000 ; Rise       ; clock           ;
+; en_mult                   ; clock      ; 3.893 ; 3.893 ; Rise       ; clock           ;
+; en_pid_fpconversion       ; clock      ; 3.622 ; 3.622 ; Rise       ; clock           ;
+; en_pps_conversion         ; clock      ; 3.840 ; 3.840 ; Rise       ; clock           ;
+; en_pps_diff               ; clock      ; 3.634 ; 3.634 ; Rise       ; clock           ;
+; en_pps_interrupt          ; clock      ; 3.823 ; 3.823 ; Rise       ; clock           ;
+; en_pwm_complement         ; clock      ; 3.918 ; 3.918 ; Rise       ; clock           ;
+; en_sum_ki                 ; clock      ; 4.010 ; 4.010 ; Rise       ; clock           ;
+; en_sum_ki_kd              ; clock      ; 3.962 ; 3.962 ; Rise       ; clock           ;
+; en_sum_kp_ki_kd           ; clock      ; 3.878 ; 3.878 ; Rise       ; clock           ;
+; en_user_rpm_conversion    ; clock      ; 3.739 ; 3.739 ; Rise       ; clock           ;
+; load_current_pps          ; clock      ; 3.587 ; 3.587 ; Rise       ; clock           ;
+; load_current_rpm          ; clock      ; 3.710 ; 3.710 ; Rise       ; clock           ;
+; load_kp_mult_reg          ; clock      ; 3.580 ; 3.580 ; Rise       ; clock           ;
+; load_last_error           ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_pid_res              ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_pps_interrupt_in     ; clock      ; 3.557 ; 3.557 ; Rise       ; clock           ;
+; load_prev_pps             ; clock      ; 3.602 ; 3.602 ; Rise       ; clock           ;
+; load_total_error          ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_user_rpm             ; clock      ; 3.491 ; 3.491 ; Rise       ; clock           ;
+; rst_encoder_pulse_counter ; clock      ; 3.782 ; 3.782 ; Rise       ; clock           ;
+; rst_pps_interrupt         ; clock      ; 3.502 ; 3.502 ; Rise       ; clock           ;
+; state_debug[*]            ; clock      ; 3.643 ; 3.643 ; Rise       ; clock           ;
+;  state_debug[0]           ; clock      ; 4.258 ; 4.258 ; Rise       ; clock           ;
+;  state_debug[1]           ; clock      ; 4.049 ; 4.049 ; Rise       ; clock           ;
+;  state_debug[2]           ; clock      ; 4.086 ; 4.086 ; Rise       ; clock           ;
+;  state_debug[3]           ; clock      ; 4.016 ; 4.016 ; Rise       ; clock           ;
+;  state_debug[4]           ; clock      ; 3.643 ; 3.643 ; Rise       ; clock           ;
+;  state_debug[5]           ; clock      ; 3.769 ; 3.769 ; Rise       ; clock           ;
++---------------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Propagation Delay                                                              ;
++----------------------+-------------------------------+-------+----+----+-------+
+; Input Port           ; Output Port                   ; RR    ; RF ; FR ; FF    ;
++----------------------+-------------------------------+-------+----+----+-------+
+; const_mult_nan       ; operational_error_encoder[6]  ; 4.405 ;    ;    ; 4.405 ;
+; const_mult_ovf       ; operational_error_encoder[4]  ; 4.505 ;    ;    ; 4.505 ;
+; const_mult_udf       ; operational_error_encoder[5]  ; 4.797 ;    ;    ; 4.797 ;
+; const_mult_zero      ; operational_error_encoder[7]  ; 4.514 ;    ;    ; 4.514 ;
+; current_error_nan    ; operational_error_encoder[18] ; 4.829 ;    ;    ; 4.829 ;
+; current_error_ovf    ; operational_error_encoder[16] ; 4.763 ;    ;    ; 4.763 ;
+; current_error_udf    ; operational_error_encoder[17] ; 4.822 ;    ;    ; 4.822 ;
+; current_error_zero   ; operational_error_encoder[19] ; 4.822 ;    ;    ; 4.822 ;
+; kd_diff_nan          ; operational_error_pid[2]      ; 4.495 ;    ;    ; 4.495 ;
+; kd_diff_ovf          ; operational_error_pid[0]      ; 4.776 ;    ;    ; 4.776 ;
+; kd_diff_udf          ; operational_error_pid[1]      ; 4.797 ;    ;    ; 4.797 ;
+; kd_diff_zero         ; operational_error_pid[3]      ; 4.375 ;    ;    ; 4.375 ;
+; kd_mult_nan          ; operational_error_pid[14]     ; 4.783 ;    ;    ; 4.783 ;
+; kd_mult_ovf          ; operational_error_pid[12]     ; 4.705 ;    ;    ; 4.705 ;
+; kd_mult_udf          ; operational_error_pid[13]     ; 4.359 ;    ;    ; 4.359 ;
+; kd_mult_zero         ; operational_error_pid[15]     ; 4.412 ;    ;    ; 4.412 ;
+; ki_kd_sum_nan        ; operational_error_pid[18]     ; 4.816 ;    ;    ; 4.816 ;
+; ki_kd_sum_ovf        ; operational_error_pid[16]     ; 4.848 ;    ;    ; 4.848 ;
+; ki_kd_sum_udf        ; operational_error_pid[17]     ; 4.631 ;    ;    ; 4.631 ;
+; ki_kd_sum_zero       ; operational_error_pid[19]     ; 4.827 ;    ;    ; 4.827 ;
+; ki_mult_nan          ; operational_error_pid[10]     ; 4.762 ;    ;    ; 4.762 ;
+; ki_mult_ovf          ; operational_error_pid[8]      ; 4.836 ;    ;    ; 4.836 ;
+; ki_mult_udf          ; operational_error_pid[9]      ; 4.900 ;    ;    ; 4.900 ;
+; ki_mult_zero         ; operational_error_pid[11]     ; 4.375 ;    ;    ; 4.375 ;
+; ki_sum_nan           ; operational_error_pid[6]      ; 4.399 ;    ;    ; 4.399 ;
+; ki_sum_ovf           ; operational_error_pid[4]      ; 4.419 ;    ;    ; 4.419 ;
+; ki_sum_udf           ; operational_error_pid[5]      ; 4.460 ;    ;    ; 4.460 ;
+; ki_sum_zero          ; operational_error_pid[7]      ; 4.405 ;    ;    ; 4.405 ;
+; kp_ki_kd_sum_nan     ; operational_error_pid[22]     ; 4.341 ;    ;    ; 4.341 ;
+; kp_ki_kd_sum_ovf     ; operational_error_pid[20]     ; 4.415 ;    ;    ; 4.415 ;
+; kp_ki_kd_sum_udf     ; operational_error_pid[21]     ; 4.455 ;    ;    ; 4.455 ;
+; kp_ki_kd_sum_zero    ; operational_error_pid[23]     ; 4.371 ;    ;    ; 4.371 ;
+; kp_mult_nan          ; operational_error_encoder[22] ; 4.849 ;    ;    ; 4.849 ;
+; kp_mult_ovf          ; operational_error_encoder[20] ; 4.829 ;    ;    ; 4.829 ;
+; kp_mult_udf          ; operational_error_encoder[21] ; 4.802 ;    ;    ; 4.802 ;
+; kp_mult_zero         ; operational_error_encoder[23] ; 4.839 ;    ;    ; 4.839 ;
+; pid_fpconversion_nan ; operational_error_pid[26]     ; 4.808 ;    ;    ; 4.808 ;
+; pid_fpconversion_neg ; operational_error_pid[27]     ; 4.689 ;    ;    ; 4.689 ;
+; pid_fpconversion_ovf ; operational_error_pid[24]     ; 4.385 ;    ;    ; 4.385 ;
+; pid_fpconversion_udf ; operational_error_pid[25]     ; 4.484 ;    ;    ; 4.484 ;
+; pps_diff_nan         ; operational_error_encoder[2]  ; 4.495 ;    ;    ; 4.495 ;
+; pps_diff_ovf         ; operational_error_encoder[0]  ; 4.826 ;    ;    ; 4.826 ;
+; pps_diff_udf         ; operational_error_encoder[1]  ; 4.435 ;    ;    ; 4.435 ;
+; pps_diff_zero        ; operational_error_encoder[3]  ; 4.351 ;    ;    ; 4.351 ;
+; pwm_complement_ovf   ; operational_error_pid[31]     ; 4.410 ;    ;    ; 4.410 ;
++----------------------+-------------------------------+-------+----+----+-------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Propagation Delay                                                      ;
++----------------------+-------------------------------+-------+----+----+-------+
+; Input Port           ; Output Port                   ; RR    ; RF ; FR ; FF    ;
++----------------------+-------------------------------+-------+----+----+-------+
+; const_mult_nan       ; operational_error_encoder[6]  ; 4.405 ;    ;    ; 4.405 ;
+; const_mult_ovf       ; operational_error_encoder[4]  ; 4.505 ;    ;    ; 4.505 ;
+; const_mult_udf       ; operational_error_encoder[5]  ; 4.797 ;    ;    ; 4.797 ;
+; const_mult_zero      ; operational_error_encoder[7]  ; 4.514 ;    ;    ; 4.514 ;
+; current_error_nan    ; operational_error_encoder[18] ; 4.829 ;    ;    ; 4.829 ;
+; current_error_ovf    ; operational_error_encoder[16] ; 4.763 ;    ;    ; 4.763 ;
+; current_error_udf    ; operational_error_encoder[17] ; 4.822 ;    ;    ; 4.822 ;
+; current_error_zero   ; operational_error_encoder[19] ; 4.822 ;    ;    ; 4.822 ;
+; kd_diff_nan          ; operational_error_pid[2]      ; 4.495 ;    ;    ; 4.495 ;
+; kd_diff_ovf          ; operational_error_pid[0]      ; 4.776 ;    ;    ; 4.776 ;
+; kd_diff_udf          ; operational_error_pid[1]      ; 4.797 ;    ;    ; 4.797 ;
+; kd_diff_zero         ; operational_error_pid[3]      ; 4.375 ;    ;    ; 4.375 ;
+; kd_mult_nan          ; operational_error_pid[14]     ; 4.783 ;    ;    ; 4.783 ;
+; kd_mult_ovf          ; operational_error_pid[12]     ; 4.705 ;    ;    ; 4.705 ;
+; kd_mult_udf          ; operational_error_pid[13]     ; 4.359 ;    ;    ; 4.359 ;
+; kd_mult_zero         ; operational_error_pid[15]     ; 4.412 ;    ;    ; 4.412 ;
+; ki_kd_sum_nan        ; operational_error_pid[18]     ; 4.816 ;    ;    ; 4.816 ;
+; ki_kd_sum_ovf        ; operational_error_pid[16]     ; 4.848 ;    ;    ; 4.848 ;
+; ki_kd_sum_udf        ; operational_error_pid[17]     ; 4.631 ;    ;    ; 4.631 ;
+; ki_kd_sum_zero       ; operational_error_pid[19]     ; 4.827 ;    ;    ; 4.827 ;
+; ki_mult_nan          ; operational_error_pid[10]     ; 4.762 ;    ;    ; 4.762 ;
+; ki_mult_ovf          ; operational_error_pid[8]      ; 4.836 ;    ;    ; 4.836 ;
+; ki_mult_udf          ; operational_error_pid[9]      ; 4.900 ;    ;    ; 4.900 ;
+; ki_mult_zero         ; operational_error_pid[11]     ; 4.375 ;    ;    ; 4.375 ;
+; ki_sum_nan           ; operational_error_pid[6]      ; 4.399 ;    ;    ; 4.399 ;
+; ki_sum_ovf           ; operational_error_pid[4]      ; 4.419 ;    ;    ; 4.419 ;
+; ki_sum_udf           ; operational_error_pid[5]      ; 4.460 ;    ;    ; 4.460 ;
+; ki_sum_zero          ; operational_error_pid[7]      ; 4.405 ;    ;    ; 4.405 ;
+; kp_ki_kd_sum_nan     ; operational_error_pid[22]     ; 4.341 ;    ;    ; 4.341 ;
+; kp_ki_kd_sum_ovf     ; operational_error_pid[20]     ; 4.415 ;    ;    ; 4.415 ;
+; kp_ki_kd_sum_udf     ; operational_error_pid[21]     ; 4.455 ;    ;    ; 4.455 ;
+; kp_ki_kd_sum_zero    ; operational_error_pid[23]     ; 4.371 ;    ;    ; 4.371 ;
+; kp_mult_nan          ; operational_error_encoder[22] ; 4.849 ;    ;    ; 4.849 ;
+; kp_mult_ovf          ; operational_error_encoder[20] ; 4.829 ;    ;    ; 4.829 ;
+; kp_mult_udf          ; operational_error_encoder[21] ; 4.802 ;    ;    ; 4.802 ;
+; kp_mult_zero         ; operational_error_encoder[23] ; 4.839 ;    ;    ; 4.839 ;
+; pid_fpconversion_nan ; operational_error_pid[26]     ; 4.808 ;    ;    ; 4.808 ;
+; pid_fpconversion_neg ; operational_error_pid[27]     ; 4.689 ;    ;    ; 4.689 ;
+; pid_fpconversion_ovf ; operational_error_pid[24]     ; 4.385 ;    ;    ; 4.385 ;
+; pid_fpconversion_udf ; operational_error_pid[25]     ; 4.484 ;    ;    ; 4.484 ;
+; pps_diff_nan         ; operational_error_encoder[2]  ; 4.495 ;    ;    ; 4.495 ;
+; pps_diff_ovf         ; operational_error_encoder[0]  ; 4.826 ;    ;    ; 4.826 ;
+; pps_diff_udf         ; operational_error_encoder[1]  ; 4.435 ;    ;    ; 4.435 ;
+; pps_diff_zero        ; operational_error_encoder[3]  ; 4.351 ;    ;    ; 4.351 ;
+; pwm_complement_ovf   ; operational_error_pid[31]     ; 4.410 ;    ;    ; 4.410 ;
++----------------------+-------------------------------+-------+----+----+-------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 12.540 ; 0.203 ; N/A      ; N/A     ; 8.758               ;
+;  clock           ; 12.540 ; 0.203 ; N/A      ; N/A     ; 8.758               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clock           ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Setup Times                                                                       ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; cmd[*]                ; clock      ; 6.232 ; 6.232 ; Rise       ; clock           ;
+;  cmd[0]               ; clock      ; 6.232 ; 6.232 ; Rise       ; clock           ;
+;  cmd[1]               ; clock      ; 6.173 ; 6.173 ; Rise       ; clock           ;
+; cmd_send              ; clock      ; 6.319 ; 6.319 ; Rise       ; clock           ;
+; delay_counter_trigger ; clock      ; 7.136 ; 7.136 ; Rise       ; clock           ;
+; pps_interrupt_trigger ; clock      ; 6.625 ; 6.625 ; Rise       ; clock           ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Hold Times                                                                          ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------------+------------+--------+--------+------------+-----------------+
+; cmd[*]                ; clock      ; -1.632 ; -1.632 ; Rise       ; clock           ;
+;  cmd[0]               ; clock      ; -1.632 ; -1.632 ; Rise       ; clock           ;
+;  cmd[1]               ; clock      ; -1.739 ; -1.739 ; Rise       ; clock           ;
+; cmd_send              ; clock      ; -1.799 ; -1.799 ; Rise       ; clock           ;
+; delay_counter_trigger ; clock      ; -1.515 ; -1.515 ; Rise       ; clock           ;
+; pps_interrupt_trigger ; clock      ; -1.629 ; -1.629 ; Rise       ; clock           ;
++-----------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++---------------------------+------------+--------+--------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------------+------------+--------+--------+------------+-----------------+
+; delay_counter_in[*]       ; clock      ; 14.202 ; 14.202 ; Rise       ; clock           ;
+;  delay_counter_in[0]      ; clock      ; 14.202 ; 14.202 ; Rise       ; clock           ;
+;  delay_counter_in[1]      ; clock      ; 11.324 ; 11.324 ; Rise       ; clock           ;
+;  delay_counter_in[2]      ; clock      ; 11.742 ; 11.742 ; Rise       ; clock           ;
+; en_const_mult             ; clock      ; 9.384  ; 9.384  ; Rise       ; clock           ;
+; en_delay_counter          ; clock      ; 12.823 ; 12.823 ; Rise       ; clock           ;
+; en_diff_current_error     ; clock      ; 13.470 ; 13.470 ; Rise       ; clock           ;
+; en_diff_kd                ; clock      ; 12.679 ; 12.679 ; Rise       ; clock           ;
+; en_mult                   ; clock      ; 11.870 ; 11.870 ; Rise       ; clock           ;
+; en_pid_fpconversion       ; clock      ; 10.758 ; 10.758 ; Rise       ; clock           ;
+; en_pps_conversion         ; clock      ; 10.995 ; 10.995 ; Rise       ; clock           ;
+; en_pps_diff               ; clock      ; 10.592 ; 10.592 ; Rise       ; clock           ;
+; en_pps_interrupt          ; clock      ; 10.708 ; 10.708 ; Rise       ; clock           ;
+; en_pwm_complement         ; clock      ; 9.538  ; 9.538  ; Rise       ; clock           ;
+; en_sum_ki                 ; clock      ; 12.689 ; 12.689 ; Rise       ; clock           ;
+; en_sum_ki_kd              ; clock      ; 12.055 ; 12.055 ; Rise       ; clock           ;
+; en_sum_kp_ki_kd           ; clock      ; 11.713 ; 11.713 ; Rise       ; clock           ;
+; en_user_rpm_conversion    ; clock      ; 9.380  ; 9.380  ; Rise       ; clock           ;
+; load_current_pps          ; clock      ; 8.048  ; 8.048  ; Rise       ; clock           ;
+; load_current_rpm          ; clock      ; 8.473  ; 8.473  ; Rise       ; clock           ;
+; load_kp_mult_reg          ; clock      ; 8.020  ; 8.020  ; Rise       ; clock           ;
+; load_last_error           ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_pid_res              ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_pps_interrupt_in     ; clock      ; 8.015  ; 8.015  ; Rise       ; clock           ;
+; load_prev_pps             ; clock      ; 8.067  ; 8.067  ; Rise       ; clock           ;
+; load_total_error          ; clock      ; 9.090  ; 9.090  ; Rise       ; clock           ;
+; load_user_rpm             ; clock      ; 7.720  ; 7.720  ; Rise       ; clock           ;
+; rst_encoder_pulse_counter ; clock      ; 9.283  ; 9.283  ; Rise       ; clock           ;
+; rst_pps_interrupt         ; clock      ; 7.723  ; 7.723  ; Rise       ; clock           ;
+; state_debug[*]            ; clock      ; 13.167 ; 13.167 ; Rise       ; clock           ;
+;  state_debug[0]           ; clock      ; 13.167 ; 13.167 ; Rise       ; clock           ;
+;  state_debug[1]           ; clock      ; 13.155 ; 13.155 ; Rise       ; clock           ;
+;  state_debug[2]           ; clock      ; 12.338 ; 12.338 ; Rise       ; clock           ;
+;  state_debug[3]           ; clock      ; 12.425 ; 12.425 ; Rise       ; clock           ;
+;  state_debug[4]           ; clock      ; 11.388 ; 11.388 ; Rise       ; clock           ;
+;  state_debug[5]           ; clock      ; 11.357 ; 11.357 ; Rise       ; clock           ;
++---------------------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                         ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; Data Port                 ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------------+------------+-------+-------+------------+-----------------+
+; delay_counter_in[*]       ; clock      ; 3.839 ; 3.839 ; Rise       ; clock           ;
+;  delay_counter_in[0]      ; clock      ; 4.180 ; 4.180 ; Rise       ; clock           ;
+;  delay_counter_in[1]      ; clock      ; 3.839 ; 3.839 ; Rise       ; clock           ;
+;  delay_counter_in[2]      ; clock      ; 3.858 ; 3.858 ; Rise       ; clock           ;
+; en_const_mult             ; clock      ; 3.643 ; 3.643 ; Rise       ; clock           ;
+; en_delay_counter          ; clock      ; 3.841 ; 3.841 ; Rise       ; clock           ;
+; en_diff_current_error     ; clock      ; 3.965 ; 3.965 ; Rise       ; clock           ;
+; en_diff_kd                ; clock      ; 4.000 ; 4.000 ; Rise       ; clock           ;
+; en_mult                   ; clock      ; 3.893 ; 3.893 ; Rise       ; clock           ;
+; en_pid_fpconversion       ; clock      ; 3.622 ; 3.622 ; Rise       ; clock           ;
+; en_pps_conversion         ; clock      ; 3.840 ; 3.840 ; Rise       ; clock           ;
+; en_pps_diff               ; clock      ; 3.634 ; 3.634 ; Rise       ; clock           ;
+; en_pps_interrupt          ; clock      ; 3.823 ; 3.823 ; Rise       ; clock           ;
+; en_pwm_complement         ; clock      ; 3.918 ; 3.918 ; Rise       ; clock           ;
+; en_sum_ki                 ; clock      ; 4.010 ; 4.010 ; Rise       ; clock           ;
+; en_sum_ki_kd              ; clock      ; 3.962 ; 3.962 ; Rise       ; clock           ;
+; en_sum_kp_ki_kd           ; clock      ; 3.878 ; 3.878 ; Rise       ; clock           ;
+; en_user_rpm_conversion    ; clock      ; 3.739 ; 3.739 ; Rise       ; clock           ;
+; load_current_pps          ; clock      ; 3.587 ; 3.587 ; Rise       ; clock           ;
+; load_current_rpm          ; clock      ; 3.710 ; 3.710 ; Rise       ; clock           ;
+; load_kp_mult_reg          ; clock      ; 3.580 ; 3.580 ; Rise       ; clock           ;
+; load_last_error           ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_pid_res              ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_pps_interrupt_in     ; clock      ; 3.557 ; 3.557 ; Rise       ; clock           ;
+; load_prev_pps             ; clock      ; 3.602 ; 3.602 ; Rise       ; clock           ;
+; load_total_error          ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+; load_user_rpm             ; clock      ; 3.491 ; 3.491 ; Rise       ; clock           ;
+; rst_encoder_pulse_counter ; clock      ; 3.782 ; 3.782 ; Rise       ; clock           ;
+; rst_pps_interrupt         ; clock      ; 3.502 ; 3.502 ; Rise       ; clock           ;
+; state_debug[*]            ; clock      ; 3.643 ; 3.643 ; Rise       ; clock           ;
+;  state_debug[0]           ; clock      ; 4.258 ; 4.258 ; Rise       ; clock           ;
+;  state_debug[1]           ; clock      ; 4.049 ; 4.049 ; Rise       ; clock           ;
+;  state_debug[2]           ; clock      ; 4.086 ; 4.086 ; Rise       ; clock           ;
+;  state_debug[3]           ; clock      ; 4.016 ; 4.016 ; Rise       ; clock           ;
+;  state_debug[4]           ; clock      ; 3.643 ; 3.643 ; Rise       ; clock           ;
+;  state_debug[5]           ; clock      ; 3.769 ; 3.769 ; Rise       ; clock           ;
++---------------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Progagation Delay                                                                ;
++----------------------+-------------------------------+--------+----+----+--------+
+; Input Port           ; Output Port                   ; RR     ; RF ; FR ; FF     ;
++----------------------+-------------------------------+--------+----+----+--------+
+; const_mult_nan       ; operational_error_encoder[6]  ; 9.225  ;    ;    ; 9.225  ;
+; const_mult_ovf       ; operational_error_encoder[4]  ; 9.544  ;    ;    ; 9.544  ;
+; const_mult_udf       ; operational_error_encoder[5]  ; 10.411 ;    ;    ; 10.411 ;
+; const_mult_zero      ; operational_error_encoder[7]  ; 9.550  ;    ;    ; 9.550  ;
+; current_error_nan    ; operational_error_encoder[18] ; 10.517 ;    ;    ; 10.517 ;
+; current_error_ovf    ; operational_error_encoder[16] ; 10.407 ;    ;    ; 10.407 ;
+; current_error_udf    ; operational_error_encoder[17] ; 10.455 ;    ;    ; 10.455 ;
+; current_error_zero   ; operational_error_encoder[19] ; 10.467 ;    ;    ; 10.467 ;
+; kd_diff_nan          ; operational_error_pid[2]      ; 9.534  ;    ;    ; 9.534  ;
+; kd_diff_ovf          ; operational_error_pid[0]      ; 10.424 ;    ;    ; 10.424 ;
+; kd_diff_udf          ; operational_error_pid[1]      ; 10.453 ;    ;    ; 10.453 ;
+; kd_diff_zero         ; operational_error_pid[3]      ; 9.195  ;    ;    ; 9.195  ;
+; kd_mult_nan          ; operational_error_pid[14]     ; 10.428 ;    ;    ; 10.428 ;
+; kd_mult_ovf          ; operational_error_pid[12]     ; 10.107 ;    ;    ; 10.107 ;
+; kd_mult_udf          ; operational_error_pid[13]     ; 9.163  ;    ;    ; 9.163  ;
+; kd_mult_zero         ; operational_error_pid[15]     ; 9.213  ;    ;    ; 9.213  ;
+; ki_kd_sum_nan        ; operational_error_pid[18]     ; 10.451 ;    ;    ; 10.451 ;
+; ki_kd_sum_ovf        ; operational_error_pid[16]     ; 10.509 ;    ;    ; 10.509 ;
+; ki_kd_sum_udf        ; operational_error_pid[17]     ; 10.011 ;    ;    ; 10.011 ;
+; ki_kd_sum_zero       ; operational_error_pid[19]     ; 10.473 ;    ;    ; 10.473 ;
+; ki_mult_nan          ; operational_error_pid[10]     ; 10.408 ;    ;    ; 10.408 ;
+; ki_mult_ovf          ; operational_error_pid[8]      ; 10.510 ;    ;    ; 10.510 ;
+; ki_mult_udf          ; operational_error_pid[9]      ; 10.578 ;    ;    ; 10.578 ;
+; ki_mult_zero         ; operational_error_pid[11]     ; 9.195  ;    ;    ; 9.195  ;
+; ki_sum_nan           ; operational_error_pid[6]      ; 9.203  ;    ;    ; 9.203  ;
+; ki_sum_ovf           ; operational_error_pid[4]      ; 9.223  ;    ;    ; 9.223  ;
+; ki_sum_udf           ; operational_error_pid[5]      ; 9.285  ;    ;    ; 9.285  ;
+; ki_sum_zero          ; operational_error_pid[7]      ; 9.225  ;    ;    ; 9.225  ;
+; kp_ki_kd_sum_nan     ; operational_error_pid[22]     ; 9.142  ;    ;    ; 9.142  ;
+; kp_ki_kd_sum_ovf     ; operational_error_pid[20]     ; 9.235  ;    ;    ; 9.235  ;
+; kp_ki_kd_sum_udf     ; operational_error_pid[21]     ; 9.275  ;    ;    ; 9.275  ;
+; kp_ki_kd_sum_zero    ; operational_error_pid[23]     ; 9.172  ;    ;    ; 9.172  ;
+; kp_mult_nan          ; operational_error_encoder[22] ; 10.517 ;    ;    ; 10.517 ;
+; kp_mult_ovf          ; operational_error_encoder[20] ; 10.489 ;    ;    ; 10.489 ;
+; kp_mult_udf          ; operational_error_encoder[21] ; 10.435 ;    ;    ; 10.435 ;
+; kp_mult_zero         ; operational_error_encoder[23] ; 10.506 ;    ;    ; 10.506 ;
+; pid_fpconversion_nan ; operational_error_pid[26]     ; 10.474 ;    ;    ; 10.474 ;
+; pid_fpconversion_neg ; operational_error_pid[27]     ; 10.077 ;    ;    ; 10.077 ;
+; pid_fpconversion_ovf ; operational_error_pid[24]     ; 9.205  ;    ;    ; 9.205  ;
+; pid_fpconversion_udf ; operational_error_pid[25]     ; 9.523  ;    ;    ; 9.523  ;
+; pps_diff_nan         ; operational_error_encoder[2]  ; 9.534  ;    ;    ; 9.534  ;
+; pps_diff_ovf         ; operational_error_encoder[0]  ; 10.494 ;    ;    ; 10.494 ;
+; pps_diff_udf         ; operational_error_encoder[1]  ; 9.255  ;    ;    ; 9.255  ;
+; pps_diff_zero        ; operational_error_encoder[3]  ; 9.152  ;    ;    ; 9.152  ;
+; pwm_complement_ovf   ; operational_error_pid[31]     ; 9.235  ;    ;    ; 9.235  ;
++----------------------+-------------------------------+--------+----+----+--------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Progagation Delay                                                      ;
++----------------------+-------------------------------+-------+----+----+-------+
+; Input Port           ; Output Port                   ; RR    ; RF ; FR ; FF    ;
++----------------------+-------------------------------+-------+----+----+-------+
+; const_mult_nan       ; operational_error_encoder[6]  ; 4.405 ;    ;    ; 4.405 ;
+; const_mult_ovf       ; operational_error_encoder[4]  ; 4.505 ;    ;    ; 4.505 ;
+; const_mult_udf       ; operational_error_encoder[5]  ; 4.797 ;    ;    ; 4.797 ;
+; const_mult_zero      ; operational_error_encoder[7]  ; 4.514 ;    ;    ; 4.514 ;
+; current_error_nan    ; operational_error_encoder[18] ; 4.829 ;    ;    ; 4.829 ;
+; current_error_ovf    ; operational_error_encoder[16] ; 4.763 ;    ;    ; 4.763 ;
+; current_error_udf    ; operational_error_encoder[17] ; 4.822 ;    ;    ; 4.822 ;
+; current_error_zero   ; operational_error_encoder[19] ; 4.822 ;    ;    ; 4.822 ;
+; kd_diff_nan          ; operational_error_pid[2]      ; 4.495 ;    ;    ; 4.495 ;
+; kd_diff_ovf          ; operational_error_pid[0]      ; 4.776 ;    ;    ; 4.776 ;
+; kd_diff_udf          ; operational_error_pid[1]      ; 4.797 ;    ;    ; 4.797 ;
+; kd_diff_zero         ; operational_error_pid[3]      ; 4.375 ;    ;    ; 4.375 ;
+; kd_mult_nan          ; operational_error_pid[14]     ; 4.783 ;    ;    ; 4.783 ;
+; kd_mult_ovf          ; operational_error_pid[12]     ; 4.705 ;    ;    ; 4.705 ;
+; kd_mult_udf          ; operational_error_pid[13]     ; 4.359 ;    ;    ; 4.359 ;
+; kd_mult_zero         ; operational_error_pid[15]     ; 4.412 ;    ;    ; 4.412 ;
+; ki_kd_sum_nan        ; operational_error_pid[18]     ; 4.816 ;    ;    ; 4.816 ;
+; ki_kd_sum_ovf        ; operational_error_pid[16]     ; 4.848 ;    ;    ; 4.848 ;
+; ki_kd_sum_udf        ; operational_error_pid[17]     ; 4.631 ;    ;    ; 4.631 ;
+; ki_kd_sum_zero       ; operational_error_pid[19]     ; 4.827 ;    ;    ; 4.827 ;
+; ki_mult_nan          ; operational_error_pid[10]     ; 4.762 ;    ;    ; 4.762 ;
+; ki_mult_ovf          ; operational_error_pid[8]      ; 4.836 ;    ;    ; 4.836 ;
+; ki_mult_udf          ; operational_error_pid[9]      ; 4.900 ;    ;    ; 4.900 ;
+; ki_mult_zero         ; operational_error_pid[11]     ; 4.375 ;    ;    ; 4.375 ;
+; ki_sum_nan           ; operational_error_pid[6]      ; 4.399 ;    ;    ; 4.399 ;
+; ki_sum_ovf           ; operational_error_pid[4]      ; 4.419 ;    ;    ; 4.419 ;
+; ki_sum_udf           ; operational_error_pid[5]      ; 4.460 ;    ;    ; 4.460 ;
+; ki_sum_zero          ; operational_error_pid[7]      ; 4.405 ;    ;    ; 4.405 ;
+; kp_ki_kd_sum_nan     ; operational_error_pid[22]     ; 4.341 ;    ;    ; 4.341 ;
+; kp_ki_kd_sum_ovf     ; operational_error_pid[20]     ; 4.415 ;    ;    ; 4.415 ;
+; kp_ki_kd_sum_udf     ; operational_error_pid[21]     ; 4.455 ;    ;    ; 4.455 ;
+; kp_ki_kd_sum_zero    ; operational_error_pid[23]     ; 4.371 ;    ;    ; 4.371 ;
+; kp_mult_nan          ; operational_error_encoder[22] ; 4.849 ;    ;    ; 4.849 ;
+; kp_mult_ovf          ; operational_error_encoder[20] ; 4.829 ;    ;    ; 4.829 ;
+; kp_mult_udf          ; operational_error_encoder[21] ; 4.802 ;    ;    ; 4.802 ;
+; kp_mult_zero         ; operational_error_encoder[23] ; 4.839 ;    ;    ; 4.839 ;
+; pid_fpconversion_nan ; operational_error_pid[26]     ; 4.808 ;    ;    ; 4.808 ;
+; pid_fpconversion_neg ; operational_error_pid[27]     ; 4.689 ;    ;    ; 4.689 ;
+; pid_fpconversion_ovf ; operational_error_pid[24]     ; 4.385 ;    ;    ; 4.385 ;
+; pid_fpconversion_udf ; operational_error_pid[25]     ; 4.484 ;    ;    ; 4.484 ;
+; pps_diff_nan         ; operational_error_encoder[2]  ; 4.495 ;    ;    ; 4.495 ;
+; pps_diff_ovf         ; operational_error_encoder[0]  ; 4.826 ;    ;    ; 4.826 ;
+; pps_diff_udf         ; operational_error_encoder[1]  ; 4.435 ;    ;    ; 4.435 ;
+; pps_diff_zero        ; operational_error_encoder[3]  ; 4.351 ;    ;    ; 4.351 ;
+; pwm_complement_ovf   ; operational_error_pid[31]     ; 4.410 ;    ;    ; 4.410 ;
++----------------------+-------------------------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 98       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 98       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 51    ; 51   ;
+; Unconstrained Input Port Paths  ; 127   ; 127  ;
+; Unconstrained Output Ports      ; 79    ; 79   ;
+; Unconstrained Output Port Paths ; 355   ; 355  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 27 11:42:13 2018
+Info: Command: quartus_sta control_unit -c control_unit
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Info (332104): Reading SDC File: 'control_unit.sdc'
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 12.540
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    12.540         0.000 clock 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.758
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.758         0.000 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 17.753
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    17.753         0.000 clock 
+Info (332146): Worst-case hold slack is 0.203
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.203         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     9.000         0.000 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4571 megabytes
+    Info: Processing ended: Tue Nov 27 11:42:14 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

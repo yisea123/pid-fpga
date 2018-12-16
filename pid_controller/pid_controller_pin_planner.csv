@@ -1,0 +1,85 @@
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+# Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+# File: C:\Users\VictorSantos\Documents\FPGA\projeto\pid_controller\pid_controller_pin_planner.csv
+# Generated on: Thu Nov 08 18:14:56 2018
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+clk,Input,PIN_V11,3B,B3B_N0,PIN_W24,,,,,,,,,,,,,,
+cmd[1],Input,PIN_W24,5B,B5B_N0,PIN_AB4,,,,,,,,,,,,,,
+cmd[0],Input,PIN_Y24,5B,B5B_N0,PIN_AA11,,,,,,,,,,,,,,
+cmd_send,Input,PIN_AH17,4A,B4A_N0,PIN_AD4,,,,,,,,,,,,,,
+encoder_in,Input,PIN_AG20,4A,B4A_N0,PIN_Y24,,,,,,,,,,,,,,
+operational_error[31],Output,,,,PIN_AF26,,,,,,,,,,,,,,
+operational_error[30],Output,,,,PIN_AG6,,,,,,,,,,,,,,
+operational_error[29],Output,,,,PIN_V16,,,,,,,,,,,,,,
+operational_error[28],Output,,,,PIN_AH12,,,,,,,,,,,,,,
+operational_error[27],Output,,,,PIN_AH2,,,,,,,,,,,,,,
+operational_error[26],Output,,,,PIN_AD17,,,,,,,,,,,,,,
+operational_error[25],Output,,,,PIN_T8,,,,,,,,,,,,,,
+operational_error[24],Output,,,,PIN_W14,,,,,,,,,,,,,,
+operational_error[23],Output,,,,PIN_AE15,,,,,,,,,,,,,,
+operational_error[22],Output,,,,PIN_W21,,,,,,,,,,,,,,
+operational_error[21],Output,,,,PIN_AF10,,,,,,,,,,,,,,
+operational_error[20],Output,,,,PIN_AE12,,,,,,,,,,,,,,
+operational_error[19],Output,,,,PIN_AG21,,,,,,,,,,,,,,
+operational_error[18],Output,,,,PIN_Y15,,,,,,,,,,,,,,
+operational_error[17],Output,,,,PIN_AH19,,,,,,,,,,,,,,
+operational_error[16],Output,,,,PIN_AF18,,,,,,,,,,,,,,
+operational_error[15],Output,,,,PIN_AF20,,,,,,,,,,,,,,
+operational_error[14],Output,,,,PIN_AE8,,,,,,,,,,,,,,
+operational_error[13],Output,,,,PIN_AG23,,,,,,,,,,,,,,
+operational_error[12],Output,,,,PIN_AG8,,,,,,,,,,,,,,
+operational_error[11],Output,,,,PIN_AE7,,,,,,,,,,,,,,
+operational_error[10],Output,,,,PIN_AH5,,,,,,,,,,,,,,
+operational_error[9],Output,,,,PIN_AH6,,,,,,,,,,,,,,
+operational_error[8],Output,,,,PIN_AH4,,,,,,,,,,,,,,
+operational_error[7],Output,,,,PIN_AE11,,,,,,,,,,,,,,
+operational_error[6],Output,,,,PIN_AF9,,,,,,,,,,,,,,
+operational_error[5],Output,,,,PIN_V11,,,,,,,,,,,,,,
+operational_error[4],Output,,,,PIN_W11,,,,,,,,,,,,,,
+operational_error[3],Output,,,,PIN_AF7,,,,,,,,,,,,,,
+operational_error[2],Output,,,,PIN_T11,,,,,,,,,,,,,,
+operational_error[1],Output,,,,PIN_T12,,,,,,,,,,,,,,
+operational_error[0],Output,,,,PIN_U10,,,,,,,,,,,,,,
+pwm_out,Output,PIN_AF21,4A,B4A_N0,PIN_V12,,,,,,,,,,,,,,
+rst,Input,PIN_W20,5B,B5B_N0,PIN_W20,,,,,,,,,,,,,,
+state_debug[7],Output,PIN_AA23,5A,B5A_N0,PIN_Y16,,,,,,,,,,,,,,
+state_debug[6],Output,PIN_Y16,5A,B5A_N0,PIN_AH7,,,,,,,,,,,,,,
+state_debug[5],Output,PIN_AE26,5A,B5A_N0,PIN_AD10,,,,,,,,,,,,,,
+state_debug[4],Output,PIN_AF26,5A,B5A_N0,PIN_AE9,,,,,,,,,,,,,,
+state_debug[3],Output,PIN_V15,5A,B5A_N0,PIN_AF8,,,,,,,,,,,,,,
+state_debug[2],Output,PIN_V16,5A,B5A_N0,PIN_AD11,,,,,,,,,,,,,,
+state_debug[1],Output,PIN_AA24,5A,B5A_N0,PIN_AF5,,,,,,,,,,,,,,
+state_debug[0],Output,PIN_W15,5A,B5A_N0,PIN_AE4,,,,,,,,,,,,,,
+user_rpm[7],Input,PIN_W11,3B,B3B_N0,PIN_AF11,,,,,,,,,,,,,,
+user_rpm[6],Input,PIN_AB23,5A,B5A_N0,PIN_AD5,,,,,,,,,,,,,,
+user_rpm[5],Input,PIN_AC22,4A,B4A_N0,PIN_V10,,,,,,,,,,,,,,
+user_rpm[4],Input,PIN_AD17,4A,B4A_N0,PIN_AE6,,,,,,,,,,,,,,
+user_rpm[3],Input,PIN_AD20,4A,B4A_N0,PIN_AF4,,,,,,,,,,,,,,
+user_rpm[2],Input,PIN_AE24,4A,B4A_N0,PIN_AF6,,,,,,,,,,,,,,
+user_rpm[1],Input,PIN_AE6,3A,B3A_N0,PIN_Y11,,,,,,,,,,,,,,
+user_rpm[0],Input,PIN_AG14,4A,B4A_N0,PIN_AC4,,,,,,,,,,,,,,
+led_signature[7],Unknown,,,,,,,,,,,,,,,,,,
+led_signature[6],Unknown,,,,,,,,,,,,,,,,,,
+led_signature[5],Unknown,,,,,,,,,,,,,,,,,,
+led_signature[4],Unknown,,,,,,,,,,,,,,,,,,
+led_signature[3],Unknown,,,,,,,,,,,,,,,,,,
+led_signature[2],Unknown,,,,,,,,,,,,,,,,,,
+led_signature[1],Unknown,,,,,,,,,,,,,,,,,,
+led_signature[0],Unknown,,,,,,,,,,,,,,,,,,

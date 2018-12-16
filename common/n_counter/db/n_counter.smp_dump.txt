@@ -1,0 +1,6 @@
+
+State Machine - |n_counter|current_state
+Name current_state.COUNTING current_state.HALTED current_state.ZERO 
+current_state.ZERO 0 0 0 
+current_state.HALTED 0 1 1 
+current_state.COUNTING 1 0 1 

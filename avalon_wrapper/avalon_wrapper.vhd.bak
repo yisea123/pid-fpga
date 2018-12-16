@@ -1,0 +1,24 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity avalon_wrapper is
+	 generic (
+    
+    );
+	  
+	port (
+
+	);
+end avalon_wrapper;
+
+architecture behavioral of avalon_wrapper is
+
+
+begin
+
+
+	
+end behavioral;
+
